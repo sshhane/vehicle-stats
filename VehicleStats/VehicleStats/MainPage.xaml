@@ -13,6 +13,6 @@
 
     <StackPanel Background="grey">
         <Button Content="Get Stats" Click="Button_Click" />
-        
+        <TextBlock Name="ResultTextBlock" />
     </StackPanel>
 </Page>
