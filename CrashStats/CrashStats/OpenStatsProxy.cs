@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
@@ -17,6 +18,26 @@ namespace CrashStats
             var http = new HttpClient();
             //var response = await http.GetAsync("https://one.nhtsa.gov/webapi/api/SafetyRatings//modelyear/2007/make/honda/model/civic?format=json");
             var response = await http.GetAsync("https://one.nhtsa.gov/webapi/api/SafetyRatings/vehicleid/2131?format=json");
+
+            var result = await response.Content.ReadAsStringAsync();
+            var serializer = new DataContractJsonSerializer(typeof(RootObject));
+
+            var ms = new MemoryStream(Encoding.UTF8.GetBytes(result));
+            var data = (RootObject)serializer.ReadObject(ms);
+
+            return data;
+        }
+
+        public static async Task<RootObject> GetYear(string year)
+        {
+            var url = "https://one.nhtsa.gov/webapi/api/SafetyRatings/modelyear/";
+            var format = "?format=json";
+
+            url =string.Concat(url, year, format);
+            Debug.WriteLine("URL: " + url);
+
+            var http = new HttpClient();
+            var response = await http.GetAsync("https://one.nhtsa.gov/webapi/api/SafetyRatings//modelyear/2007?format=json");
 
             var result = await response.Content.ReadAsStringAsync();
             var serializer = new DataContractJsonSerializer(typeof(RootObject));

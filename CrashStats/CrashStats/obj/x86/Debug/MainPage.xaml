@@ -11,13 +11,13 @@
         <Button x:ConnectionId='1' Content="Get Stats"                      />
         <TextBlock x:ConnectionId='2' x:Name="ResultTextBlock" />
         <TextBlock x:ConnectionId='3' x:Name="YearTextBlock" />
-        <TextBlock x:ConnectionId='4' x:Name="ModelTextBlock" />
-        <TextBlock x:ConnectionId='5' x:Name="MakeTextBlock" />
+        <TextBlock x:ConnectionId='4' x:Name="MakeTextBlock" />
+        <TextBlock x:ConnectionId='5' x:Name="ModelTextBlock" />
 
         <Button Content="Year">
             <Button.Flyout>
                 <MenuFlyout>
-                    <MenuFlyoutItem x:ConnectionId='8' Text="2000"                ></MenuFlyoutItem>
+                    <MenuFlyoutItem x:ConnectionId='10' Text="2000"                ></MenuFlyoutItem>
                     <MenuFlyoutItem Text="2001"></MenuFlyoutItem>
                     <MenuFlyoutItem Text="2002"></MenuFlyoutItem>
                 </MenuFlyout>
@@ -27,7 +27,7 @@
         <Button Content="Make">
             <Button.Flyout>
                 <MenuFlyout>
-                    <MenuFlyoutItem x:ConnectionId='7' Text="Acura"                ></MenuFlyoutItem>
+                    <MenuFlyoutItem x:ConnectionId='9' Text="Acura"                ></MenuFlyoutItem>
                     <MenuFlyoutItem Text="Toyota"></MenuFlyoutItem>
                 </MenuFlyout>
             </Button.Flyout>
@@ -36,11 +36,15 @@
         <Button Content="Model">
             <Button.Flyout>
                 <MenuFlyout>
-                    <MenuFlyoutItem x:ConnectionId='6' Text="Integra"                 ></MenuFlyoutItem>
+                    <MenuFlyoutItem x:ConnectionId='8' Text="Integra"                 ></MenuFlyoutItem>
                     <MenuFlyoutItem Text="Supra"></MenuFlyoutItem>
                 </MenuFlyout>
             </Button.Flyout>
         </Button>
+
+        <Button x:ConnectionId='6' Content="Get Stats"              />
+        <TextBlock x:ConnectionId='7' x:Name="TestTextBlock" />
+        
     </StackPanel>
 </Page>
 

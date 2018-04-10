@@ -11,8 +11,8 @@
         <Button Content="Get Stats" Click="Button_Click" />
         <TextBlock x:Name="ResultTextBlock" />
         <TextBlock x:Name="YearTextBlock" />
-        <TextBlock x:Name="ModelTextBlock" />
         <TextBlock x:Name="MakeTextBlock" />
+        <TextBlock x:Name="ModelTextBlock" />
 
         <Button Content="Year">
             <Button.Flyout>
@@ -41,5 +41,9 @@
                 </MenuFlyout>
             </Button.Flyout>
         </Button>
+
+        <Button Content="Get Stats" Click="Test" />
+        <TextBlock x:Name="TestTextBlock" />
+        
     </StackPanel>
 </Page>

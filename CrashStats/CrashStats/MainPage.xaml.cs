@@ -49,5 +49,12 @@ namespace CrashStats
             ModelTextBlock.Text = "Model";
         }
 
+        private async void Test(object sender, RoutedEventArgs e)
+        {
+            RootObject myStats = await OpenStatsProxy.GetYear("2000");
+            TestTextBlock.Text = "URL: ";
+
+        }
+
     }
 }

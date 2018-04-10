@@ -28,13 +28,13 @@
     <AppXManifest Include="\\gwscistud.gmadtree.gmit.ie\stud\g00332592\documents\visual studio 2015\Projects\CrashStats\CrashStats\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-04-10T19:23:30.040</Modified>
+      <Modified>2018-04-10T19:54:12.459</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="\\gwscistud.gmadtree.gmit.ie\stud\g00332592\documents\visual studio 2015\Projects\CrashStats\CrashStats\bin\x86\Debug\CrashStats.exe">
       <PackagePath>entrypoint\CrashStats.exe</PackagePath>
-      <Modified>2018-04-10T19:23:28.604</Modified>
+      <Modified>2018-04-10T19:54:11.554</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\g00332592\.nuget\packages\Microsoft.CSharp\4.0.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -490,11 +490,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="\\gwscistud.gmadtree.gmit.ie\stud\g00332592\documents\visual studio 2015\Projects\CrashStats\CrashStats\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2018-04-10T19:23:29.631</Modified>
+      <Modified>2018-04-10T19:52:09.883</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="\\gwscistud.gmadtree.gmit.ie\stud\g00332592\documents\visual studio 2015\Projects\CrashStats\CrashStats\bin\x86\Debug\Core\CrashStats.exe">
       <PackagePath>CrashStats.exe</PackagePath>
-      <Modified>2018-04-10T19:23:29.977</Modified>
+      <Modified>2018-04-10T19:54:12.381</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
