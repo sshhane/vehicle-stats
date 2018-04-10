@@ -32,8 +32,9 @@ namespace VehicleStats
         {
             RootObject myStats = await OpenStatsProxy.GetStatsAsync("honda", "civic", "2000");
 
-            //ResultTextBlock.Text = myStats.result. + " - " + myStats.result.Make;
-            
+
+            ResultTextBlock.Text = "Model" + myStats.result.Model;
+
         }
     }
 }

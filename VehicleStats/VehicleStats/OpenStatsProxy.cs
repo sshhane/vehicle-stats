@@ -79,7 +79,7 @@ namespace VehicleStats
         [DataMember]
         public int ModelYear { get; set; }
         [DataMember]
-        public string Make { get; set; }
+        public string make { get; set; }
         [DataMember]
         public string Model { get; set; }
         [DataMember]
@@ -97,5 +97,9 @@ namespace VehicleStats
         public string Message { get; set; }
         [DataMember]
         public List<Result> Results { get; set; }
+        [DataMember]
+        public Result result { get; set; }
+        [DataMember]
+        public string Model { get; set; }
     }
 }
