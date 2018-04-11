@@ -25,7 +25,7 @@ namespace CrashStats
             Debug.WriteLine("URL: " + url);
 
             var http = new HttpClient();
-            var response = await http.GetAsync("https://one.nhtsa.gov/webapi/api/SafetyRatings/modelyear/2007/make/mazda/?format=json");
+            var response = await http.GetAsync("https://one.nhtsa.gov/webapi/api/SafetyRatings/modelyear/2007/?format=json");
 
             var result = await response.Content.ReadAsStringAsync();
             var serializer = new DataContractJsonSerializer(typeof(MakeRootObject));

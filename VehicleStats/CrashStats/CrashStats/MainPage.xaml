@@ -27,8 +27,5 @@
             <ComboBox x:Name="lstModel" Visibility="Collapsed" SelectionChanged="Model_Selected" ItemsSource="{x:Bind ModelList}" Width="150" Margin="10,0"></ComboBox>
         </StackPanel>
 
-        <!--<Button Content="Get Stats" Click="Test" />
-        <TextBlock x:Name="TestTextBlock" />-->
-        
     </StackPanel>
 </Page>

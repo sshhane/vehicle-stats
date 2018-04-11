@@ -110,14 +110,14 @@ namespace CrashStats
                     }
                 }
             }
-            private void Update_ModelList(global::System.Collections.Generic.List<global::System.Int32> obj, int phase)
+            private void Update_ModelList(global::System.Collections.Generic.List<global::System.String> obj, int phase)
             {
                 if((phase & ((1 << 0) | NOT_PHASED )) != 0)
                 {
                     XamlBindingSetters.Set_Windows_UI_Xaml_Controls_ItemsControl_ItemsSource(this.obj4, obj, null);
                 }
             }
-            private void Update_MakeList(global::System.Collections.Generic.List<global::System.Int32> obj, int phase)
+            private void Update_MakeList(global::System.Collections.Generic.List<global::System.String> obj, int phase)
             {
                 if((phase & ((1 << 0) | NOT_PHASED )) != 0)
                 {

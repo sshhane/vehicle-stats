@@ -1,7 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
 using System.Linq;
+using System.Net.Http;
 using System.Runtime.Serialization;
+using System.Runtime.Serialization.Json;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -9,7 +13,35 @@ namespace CrashStats
 {
     class Models
     {
-        //public static async Task<YearRootObject> GetModels(string y){}
+        public string[] model = new string[99];
+
+        public static async Task<ModelRootObject> GetModels(string y)
+        {
+            var url = "https://one.nhtsa.gov/webapi/api/SafetyRatings/modelyear/2007/make/";
+            var format = "?format=json";
+
+            url = string.Concat(url, y, format);
+            Debug.WriteLine("URL: " + url);
+
+            var http = new HttpClient();
+            var response = await http.GetAsync("https://one.nhtsa.gov/webapi/api/SafetyRatings/modelyear/2007/?format=json");
+
+            var result = await response.Content.ReadAsStringAsync();
+            var serializer = new DataContractJsonSerializer(typeof(ModelRootObject));
+
+            var ms = new MemoryStream(Encoding.UTF8.GetBytes(result));
+            var data = (ModelRootObject)serializer.ReadObject(ms);
+
+            // int[] model = new int[data.Results.Count()];
+            Debug.WriteLine("testing " + data.Results.Count());
+            // loop over, return Model
+            //for (int i = 0; i <= data.Results.Count(); i++)
+            //{
+            //    model[i] = data.Results[i].model;
+            //    Debug.WriteLine("Model: " + model[i]);
+            //}
+            return data;
+        }
     }
 
     [DataContract]

@@ -26,25 +26,16 @@ namespace CrashStats
         //ObservableCollection<int> YearList = new ObservableCollection<int>();
 
         List<int> YearList = new List<int>();
-        List<int> MakeList = new List<int>();
-        List<int> ModelList = new List<int>();
+
+
+        List<string> MakeList = new List<string>();
+        List<string> ModelList = new List<string>();
+
 
         public MainPage()
         {
             this.InitializeComponent();
         }
-
-        //private async void Button_Click(object sender, RoutedEventArgs e)
-        //{
-        //    RootObject myStats = await OpenStatsProxy.GetStats("honda", "civic", "2000");
-        //    YearRootObject years = await Years.GetYears();
-
-        //    ResultTextBlock.Text = "Year: " + years.Results[0].ModelYear;
-        //    for (int i=0; i>years.Results.Count(); i++)
-        //    {
-        //        YearList.Add(years.Results[i].ModelYear);
-        //    }
-        //}
 
         //private ObservableCollection<Result> Results = new ObservableCollection<Result>();
 
@@ -106,7 +97,7 @@ namespace CrashStats
 
             for (int i = 0; i <= makes.Results.Count-1; i++)
             {
-            //    MakeList.Add(makes.Results[i].Make);
+                MakeList.Add(makes.Results[i].Make);
             }
             //foreach (string mk in MakeList)
             //{
@@ -121,7 +112,7 @@ namespace CrashStats
 
             // Get the ComboBox instance
             ComboBox makeComboBox = sender as ComboBox;
-            selected = makeComboBox.SelectedIndex; // get index of make e.g. acura = 0
+            selected = makeComboBox.SelectedIndex; // get index of year e.g. 2019 = 0
             Debug.WriteLine("Selected: " + selected);
 
             s = MakeList[selected].ToString();
@@ -146,6 +137,17 @@ namespace CrashStats
             //    Debug.WriteLine("Make: " + mk);
             //}
             // Debug.WriteLine("YearList: " + YearList);
+
+            ModelRootObject models = await Models.GetModels("civic");
+
+            for (int i = 0; i <= models.Results.Count - 1; i++)
+            {
+                ModelList.Add(models.Results[i].Model);
+            }
+            //foreach (string mk in MakeList)
+            //{
+            //    Debug.WriteLine("Make: " + mk);
+            //}
         }
         private async void Model_Selected(object sender, RoutedEventArgs e)
         {
