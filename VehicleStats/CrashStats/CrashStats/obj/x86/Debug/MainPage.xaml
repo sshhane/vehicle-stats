@@ -27,9 +27,6 @@
             <ComboBox x:ConnectionId='4' x:Name="lstModel" Visibility="Collapsed"                                                                    Width="150" Margin="10,0"></ComboBox>
         </StackPanel>
 
-        <!--<Button Content="Get Stats" Click="Test" />
-        <TextBlock x:Name="TestTextBlock" />-->
-        
     </StackPanel>
 </Page>
 

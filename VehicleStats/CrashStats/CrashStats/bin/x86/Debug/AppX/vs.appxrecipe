@@ -31,13 +31,13 @@
     <AppXManifest Include="D:\programing\vehicle-stats\VehicleStats\CrashStats\CrashStats\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-04-11T22:35:24.138</Modified>
+      <Modified>2018-04-11T22:47:57.576</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\programing\vehicle-stats\VehicleStats\CrashStats\CrashStats\bin\x86\Debug\CrashStats.exe">
       <PackagePath>entrypoint\CrashStats.exe</PackagePath>
-      <Modified>2018-04-11T22:35:23.977</Modified>
+      <Modified>2018-04-11T22:47:57.407</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shane\.nuget\packages\microsoft.csharp\4.0.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -504,7 +504,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\programing\vehicle-stats\VehicleStats\CrashStats\CrashStats\bin\x86\Debug\Core\CrashStats.exe">
       <PackagePath>CrashStats.exe</PackagePath>
-      <Modified>2018-04-11T22:35:24.137</Modified>
+      <Modified>2018-04-11T22:47:57.574</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

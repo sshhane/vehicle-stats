@@ -61,14 +61,19 @@ namespace CrashStats
         private async void Year_Selected(object sender, RoutedEventArgs e)
         {
             string s = "";
-            int selected = 0;
+            int selectedIndex = 0;
+            int selectedValue = 0;
 
             // Get the ComboBox instance
             ComboBox yearComboBox = sender as ComboBox;
-            selected = yearComboBox.SelectedIndex; // get index of year e.g. 2019 = 0
-            Debug.WriteLine("Selected: " + selected);
+            selectedIndex = yearComboBox.SelectedIndex; // get index of year e.g. 2019 = 0
+            Debug.WriteLine("SelectedIndex: " + selectedIndex);
 
-            s = YearList[selected].ToString();
+            // get value at pos selected
+            selectedValue = YearList[selectedIndex];
+            Debug.WriteLine("SelectedValue: " + selectedValue);
+
+            s = YearList[selectedIndex].ToString();
            // MakeRootObject makes = await Makes.GetMakes(s);
             //Makes.GetMakes(s);
 
@@ -126,10 +131,10 @@ namespace CrashStats
             //YearRootObject years = await Years.GetYears();
 
             //ResultTextBlock.Text = "Year: " + makes.Results[0].Make;
-            //for (int i = 0; i <= 29; i++)
-            //{
+            for (int i = 0; i <= 29; i++)
+            {
             //    MakeList.Add(makes.Results[i].Make);
-            //}
+            }
             //foreach (string mk in MakeList)
             //{
             //    Debug.WriteLine("Make: " + mk);
