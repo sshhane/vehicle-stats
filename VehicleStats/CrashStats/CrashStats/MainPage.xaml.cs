@@ -15,7 +15,7 @@ using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 
 using System.Diagnostics;
-
+using System.Collections.ObjectModel;
 
 namespace CrashStats
 {
@@ -34,31 +34,34 @@ namespace CrashStats
             //ResultTextBlock.Text = "Model: " + myStats.Results[0].Model;
         }
 
-        private void YearFly(object sender, RoutedEventArgs e)
+        private ObservableCollection<Result> Results = new ObservableCollection<Result>();
+
+        private async System.Threading.Tasks.Task Page_LoadedAsync(object sender, RoutedEventArgs e)
         {
-            YearTextBlock.Text = "Year";
+            YearRootObject myStats = await Years.GetYears("2000");
+
+            //foreach (var year in await Years.GetYears("2000")) ;
+            //{
+            //    Results.Add(year);
+            //}
         }
-
-        private void MakeFly(object sender, RoutedEventArgs e)
+        private async System.Threading.Tasks.Task MakeLoaded(object sender, RoutedEventArgs e)
         {
-            MakeTextBlock.Text = "Make";
+            MakeRootObject myStats = await Models.GetModels();
+
+            //foreach (var year in await Years.GetYears("2000")) ;
+            //{
+            //    Results.Add(year);
+            //}
         }
-
-        private void ModelFly(object sender, RoutedEventArgs e)
+        private async System.Threading.Tasks.Task ModelLoaded(object sender, RoutedEventArgs e)
         {
-            ModelTextBlock.Text = "Model";
-        }
+            ModelRootObject myStats = await Makes.GetMakes();
 
-        private async void Test(object sender, RoutedEventArgs e)
-        {
-            RootObject myStats = await OpenStatsProxy.GetYear("2000");
-            TestTextBlock.Text = "URL: ";
-
-        }
-
-        private void Page_Loaded(object sender, RoutedEventArgs e)
-        {
-
+            //foreach (var year in await Years.GetYears("2000")) ;
+            //{
+            //    Results.Add(year);
+            //}
         }
     }
 }
