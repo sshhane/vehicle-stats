@@ -74,6 +74,7 @@ namespace CrashStats
             Debug.WriteLine("SelectedValue: " + selectedValue);
 
             s = YearList[selectedIndex].ToString();
+            //s = "2003";
            // MakeRootObject makes = await Makes.GetMakes(s);
             //Makes.GetMakes(s);
 
@@ -96,7 +97,7 @@ namespace CrashStats
             //}
             // Debug.WriteLine("YearList: " + YearList);
 
-            MakeRootObject makes = await Makes.GetMakes("1999"); //TODO:change to variable
+            MakeRootObject makes = await Makes.GetMakes(s); //TODO:change to variable
 
             for (int i = 0; i <= makes.Results.Count-1; i++)
             {
