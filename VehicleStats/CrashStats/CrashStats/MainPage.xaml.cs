@@ -29,6 +29,9 @@ namespace CrashStats
         List<string> MakeList = new List<string>();
         List<string> ModelList = new List<string>();
 
+        // vars
+        string selectedURL = ""; //TODO: add reset
+
 
         public MainPage()
         {
@@ -74,28 +77,14 @@ namespace CrashStats
             Debug.WriteLine("SelectedValue: " + selectedValue);
 
             s = YearList[selectedIndex].ToString();
-            //s = "2003";
-           // MakeRootObject makes = await Makes.GetMakes(s);
-            //Makes.GetMakes(s);
+
+            // update selected
+            selectedURL = string.Concat(selectedURL, s);
+            Debug.WriteLine("SelectedURL: " + selectedURL);
 
             // change to visible
             lstMake.Visibility = Visibility.Visible;
             txtBlockSelectMake.Visibility = Visibility.Visible;
-
-            // Get the ComboBox selected item value and display on TextBlock
-            //TextBlock1.Text += "Selected Year : " + yearComboBox.SelectedValue.ToString();
-            //YearRootObject years = await Years.GetYears();
-
-            //ResultTextBlock.Text = "Year: " + makes.Results[0].Make;
-            //for (int i = 0; i <= 29; i++)
-            //{
-            //    MakeList.Add(makes.Results[i].Make);
-            //}
-            //foreach (string mk in MakeList)
-            //{
-            //    Debug.WriteLine("Make: " + mk);
-            //}
-            // Debug.WriteLine("YearList: " + YearList);
 
             MakeRootObject makes = await Makes.GetMakes(s); //TODO:change to variable
 
@@ -103,25 +92,24 @@ namespace CrashStats
             {
                 MakeList.Add(makes.Results[i].Make);
             }
-            //foreach (string mk in MakeList)
-            //{
-            //    Debug.WriteLine("Make: " + mk);
-            //}
         }
 
         private async void Make_Selected(object sender, RoutedEventArgs e)
         {
-            string s = "";
-            int selected = 0;
+            string mk = "";
+            int selectedIndex = 0;
+            string selectedValue = "";
 
             // Get the ComboBox instance
             ComboBox makeComboBox = sender as ComboBox;
-            selected = makeComboBox.SelectedIndex; // get index of year e.g. 2019 = 0
-            Debug.WriteLine("Selected: " + selected);
+            selectedIndex = makeComboBox.SelectedIndex; // get index of year e.g. 2019 = 0
+            Debug.WriteLine("SelectedIndex: " + selectedIndex);
 
-            s = MakeList[selected].ToString();
-            // MakeRootObject makes = await Makes.GetMakes(s);
-            //Makes.GetMakes(s);
+            // get value at pos selected
+            selectedValue = MakeList[selectedIndex];
+            Debug.WriteLine("SelectedValue: " + selectedValue);
+
+            mk = MakeList[selectedIndex];
 
             // change to visible
             lstModel.Visibility = Visibility.Visible;
@@ -138,11 +126,11 @@ namespace CrashStats
             }
             //foreach (string mk in MakeList)
             //{
-            //    Debug.WriteLine("Make: " + mk);
+            //    Debug.WriteLine("SelectedURL: " + selectedURL);
             //}
             // Debug.WriteLine("YearList: " + YearList);
 
-            ModelRootObject models = await Models.GetModels("1999", "honda"); // change to y, mk
+            ModelRootObject models = await Models.GetModels(selectedURL, mk); // change to y, mk
 
             for (int i = 0; i <= models.Results.Count - 1; i++)
             {

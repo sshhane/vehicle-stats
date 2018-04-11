@@ -21,7 +21,8 @@ namespace CrashStats
             var format = "?format=json";
             var make = "/make/";
 
-            url = string.Concat(url, y, make, mk, format);
+            url = string.Concat(url, y, make, mk);
+            url = string.Concat(url, format);
 
             //url = string.Concat(url, mk, format);
             Debug.WriteLine("URL: " + url);
