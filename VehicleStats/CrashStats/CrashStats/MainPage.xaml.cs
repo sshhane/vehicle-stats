@@ -24,7 +24,7 @@ namespace CrashStats
     {
 
         List<Students> StuList = new List<Students>();
-        List<Years> YearList = new List<Years>();
+        List<int> YearList = new List<int>();
 
 
         public MainPage()
@@ -43,12 +43,22 @@ namespace CrashStats
             this.InitializeComponent();
         }
 
+        public static int[] modelYear = new int[999];
+
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
             RootObject myStats = await OpenStatsProxy.GetStats("honda", "civic", "2000");
             YearRootObject years = await Years.GetYears();
 
             ResultTextBlock.Text = "Year: " + years.Results[0].ModelYear;
+            for (int i=0; i>years.Results.Count(); i++)
+            {
+
+                //modelYear[i] = years.Results[i].ModelYear;
+                //YearList.Insert(i, years.Results[i].ModelYear);
+                YearList.Add(years.Results[i].ModelYear);
+
+            }
         }
 
         private ObservableCollection<Result> Results = new ObservableCollection<Result>();
@@ -62,23 +72,41 @@ namespace CrashStats
             //    Results.Add(year);
             //}
         }
+
+
+        private async void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            YearRootObject years = await Years.GetYears();
+
+            ResultTextBlock.Text = "Year: " + years.Results[0].ModelYear;
+            for (int i = 0; i <= 29; i++)
+            {
+                YearList.Add(years.Results[i].ModelYear);
+            }
+            foreach (int y in YearList)
+            {
+                Debug.WriteLine("Year: " + y);
+            }
+           // Debug.WriteLine("YearList: " + YearList);
+        }
+
         //private async System.Threading.Tasks.Task MakeLoaded(object sender, RoutedEventArgs e)
         //{
-           // MakeRootObject myStats = await Models.GetModels();
+        // MakeRootObject myStats = await Models.GetModels();
 
-            //foreach (var year in await Years.GetYears("2000")) ;
-            //{
-            //    Results.Add(year);
-            //}
-        //}
-       // private async System.Threading.Tasks.Task ModelLoaded(object sender, RoutedEventArgs e)
+        //foreach (var year in await Years.GetYears("2000")) ;
         //{
-            //ModelRootObject myStats = await Makes.GetMakes();
+        //    Results.Add(year);
+        //}
+        //}
+        // private async System.Threading.Tasks.Task ModelLoaded(object sender, RoutedEventArgs e)
+        //{
+        //ModelRootObject myStats = await Makes.GetMakes();
 
-            //foreach (var year in await Years.GetYears("2000")) ;
-            //{
-            //    Results.Add(year);
-            //}
+        //foreach (var year in await Years.GetYears("2000")) ;
+        //{
+        //    Results.Add(year);
+        //}
         //}
     }
 }

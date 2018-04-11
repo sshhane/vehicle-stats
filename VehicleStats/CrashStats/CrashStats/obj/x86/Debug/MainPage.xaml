@@ -5,7 +5,7 @@
     xmlns:local="using:CrashStats"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-
+                        
     mc:Ignorable="d">
 
     <StackPanel>
@@ -20,7 +20,7 @@
         <ComboBox ItemsSource=""></ComboBox>
         <StackPanel Orientation="Horizontal" Margin="20">
             <TextBlock>Select Year</TextBlock>
-            <ComboBox x:ConnectionId='7' Name="ComboxBox1"                                Width="150" Margin="10,0"></ComboBox>
+            <ComboBox x:ConnectionId='7' Name="ComboxBox1"                                 Width="150" Margin="10,0"></ComboBox>
         </StackPanel>
 
         <!--<Button Content="Get Stats" Click="Test" />
