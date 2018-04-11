@@ -15,16 +15,19 @@ namespace CrashStats
     {
         public string[] model = new string[99];
 
-        public static async Task<ModelRootObject> GetModels(string y)
+        public static async Task<ModelRootObject> GetModels(string y, string mk)
         {
-            var url = "https://one.nhtsa.gov/webapi/api/SafetyRatings/modelyear/2007/make/";
+            var url = "https://one.nhtsa.gov/webapi/api/SafetyRatings/modelyear/";
             var format = "?format=json";
+            var make = "/make/";
 
-            url = string.Concat(url, y, format);
+            url = string.Concat(url, y, make, mk, format);
+
+            //url = string.Concat(url, mk, format);
             Debug.WriteLine("URL: " + url);
 
             var http = new HttpClient();
-            var response = await http.GetAsync("https://one.nhtsa.gov/webapi/api/SafetyRatings/modelyear/2007/?format=json");
+            var response = await http.GetAsync(url);
 
             var result = await response.Content.ReadAsStringAsync();
             var serializer = new DataContractJsonSerializer(typeof(ModelRootObject));

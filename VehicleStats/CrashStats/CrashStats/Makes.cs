@@ -18,14 +18,15 @@ namespace CrashStats
 
         public static async Task<MakeRootObject> GetMakes(string y)
         {
-            var url = "https://one.nhtsa.gov/webapi/api/SafetyRatings/modelyear/2007/make/";
+            Debug.WriteLine("string: " + y);
+            var url = "https://one.nhtsa.gov/webapi/api/SafetyRatings/modelyear/";
             var format = "?format=json";
 
             url = string.Concat(url, y, format);
             Debug.WriteLine("URL: " + url);
 
             var http = new HttpClient();
-            var response = await http.GetAsync("https://one.nhtsa.gov/webapi/api/SafetyRatings/modelyear/2007/?format=json");
+            var response = await http.GetAsync(url);
 
             var result = await response.Content.ReadAsStringAsync();
             var serializer = new DataContractJsonSerializer(typeof(MakeRootObject));

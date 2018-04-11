@@ -26,8 +26,6 @@ namespace CrashStats
         //ObservableCollection<int> YearList = new ObservableCollection<int>();
 
         List<int> YearList = new List<int>();
-
-
         List<string> MakeList = new List<string>();
         List<string> ModelList = new List<string>();
 
@@ -93,7 +91,7 @@ namespace CrashStats
             //}
             // Debug.WriteLine("YearList: " + YearList);
 
-            MakeRootObject makes = await Makes.GetMakes("honda");
+            MakeRootObject makes = await Makes.GetMakes("1999"); //TODO:change to variable
 
             for (int i = 0; i <= makes.Results.Count-1; i++)
             {
@@ -138,7 +136,7 @@ namespace CrashStats
             //}
             // Debug.WriteLine("YearList: " + YearList);
 
-            ModelRootObject models = await Models.GetModels("civic");
+            ModelRootObject models = await Models.GetModels("1999", "honda"); // change to y, mk
 
             for (int i = 0; i <= models.Results.Count - 1; i++)
             {
