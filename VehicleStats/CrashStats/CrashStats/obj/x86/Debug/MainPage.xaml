@@ -5,9 +5,8 @@
     xmlns:local="using:CrashStats"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-                        
+
     mc:Ignorable="d">
-    
 
     <StackPanel>
         <Button x:ConnectionId='2' Content="Get Stats"                      />
@@ -16,42 +15,16 @@
         <TextBlock x:ConnectionId='5' x:Name="MakeTextBlock" />
         <TextBlock x:ConnectionId='6' x:Name="ModelTextBlock" />
 
-        <!--<ComboBox ItemsSource=""></ComboBox>
+        <!--Loaded="Page_Loaded"-->
+        <!--https://www.c-sharpcorner.com/article/data-binding-in-xaml-uwp-using-combobox/-->
+        <ComboBox ItemsSource=""></ComboBox>
         <StackPanel Orientation="Horizontal" Margin="20">
             <TextBlock>Select Year</TextBlock>
-            <ComboBox Name="ComboxBox1" ItemsSource="{x:Bind YearList}" Width="150" Margin="10,0"></ComboBox>
-        </StackPanel>-->
+            <ComboBox x:ConnectionId='7' Name="ComboxBox1"                                Width="150" Margin="10,0"></ComboBox>
+        </StackPanel>
 
-        <Button Content="Year">
-            <Button.Flyout>
-                <MenuFlyout>
-                    <MenuFlyoutItem x:ConnectionId='11' Text="2000"                ></MenuFlyoutItem>
-                    <MenuFlyoutItem Text="2001"></MenuFlyoutItem>
-                    <MenuFlyoutItem Text="2002"></MenuFlyoutItem>
-                </MenuFlyout>
-            </Button.Flyout>
-        </Button>
-
-        <Button Content="Make">
-            <Button.Flyout>
-                <MenuFlyout>
-                    <MenuFlyoutItem x:ConnectionId='10' Text="Acura"                ></MenuFlyoutItem>
-                    <MenuFlyoutItem Text="Toyota"></MenuFlyoutItem>
-                </MenuFlyout>
-            </Button.Flyout>
-        </Button>
-
-        <Button Content="Model">
-            <Button.Flyout>
-                <MenuFlyout>
-                    <MenuFlyoutItem x:ConnectionId='9' Text="Integra"                 ></MenuFlyoutItem>
-                    <MenuFlyoutItem Text="Supra"></MenuFlyoutItem>
-                </MenuFlyout>
-            </Button.Flyout>
-        </Button>
-
-        <Button x:ConnectionId='7' Content="Get Stats"              />
-        <TextBlock x:ConnectionId='8' x:Name="TestTextBlock" />
+        <!--<Button Content="Get Stats" Click="Test" />
+        <TextBlock x:Name="TestTextBlock" />-->
         
     </StackPanel>
 </Page>

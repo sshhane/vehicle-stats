@@ -7,26 +7,24 @@ using System.Threading.Tasks;
 
 namespace CrashStats
 {
-    class Models
+    class Makes
     {
-        //public static async Task<YearRootObject> GetModels(string y){}
+        //public static async Task<YearRootObject> GetMakes(string y){}
     }
 
     [DataContract]
-    public class ModelResult
+    public class MakeResult
     {
         [DataMember]
         public int ModelYear { get; set; }
         [DataMember]
         public string Make { get; set; }
         [DataMember]
-        public string Model { get; set; }
-        [DataMember]
         public int VehicleId { get; set; }
     }
 
     [DataContract]
-    public class ModelRootObject
+    public class MakeRootObject
     {
         [DataMember]
         public int Count { get; set; }

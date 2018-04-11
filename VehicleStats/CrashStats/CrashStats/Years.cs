@@ -13,35 +13,35 @@ namespace CrashStats
 {
     class Years
     {
-        public static async Task<YearRootObject> GetYears(string y)
+        public static int[] modelYear = new int[999];
+
+        public static async Task<YearRootObject> GetYears()
         {
-            var url = "https://one.nhtsa.gov/webapi/api/SafetyRatings/modelyear/";
-            var format = "?format=json";
-
-            url = string.Concat(url, y, format);
-            Debug.WriteLine("URL: " + url);
-
             var http = new HttpClient();
             var response = await http.GetAsync("https://one.nhtsa.gov/webapi/api/SafetyRatings/?format=json");
 
             var result = await response.Content.ReadAsStringAsync();
-            var serializer = new DataContractJsonSerializer(typeof(RootObject));
+            var serializer = new DataContractJsonSerializer(typeof(YearRootObject));
 
             var ms = new MemoryStream(Encoding.UTF8.GetBytes(result));
             var data = (YearRootObject)serializer.ReadObject(ms);
 
-            int modelYear = data.Results[0].ModelYear;
-            Debug.WriteLine("modelYear: " + modelYear);
-
+            // int[] modelYear = new int[data.Results.Count()];
+            Debug.WriteLine("test")
+ ;
             // loop over, return ModelYear
             for (int i = 0; i < data.Results.Count(); i++)
             {
-                Debug.WriteLine("loop " + i);
-
+                modelYear[i] = data.Results[i].ModelYear;
+                Debug.WriteLine("Year: " + modelYear[i]);
             }
 
+            //modelYear = modelYear.Where(c => c != null).ToArray();
+
+            //modelYear = modelYear.Where(s => !String.IsNullOrEmpty(s)).ToArray();
             return data;
         }
+
     }
 
     [DataContract]

@@ -28,12 +28,12 @@ namespace CrashStats
             return data;
         }
 
-        public static async Task<RootObject> GetYear(string year)
+        public static async Task<RootObject> GetYears(string y)
         {
             var url = "https://one.nhtsa.gov/webapi/api/SafetyRatings/modelyear/";
             var format = "?format=json";
 
-            url =string.Concat(url, year, format);
+            url =string.Concat(url, y, format);
             Debug.WriteLine("URL: " + url);
 
             var http = new HttpClient();
@@ -127,11 +127,5 @@ namespace CrashStats
     //    [DataMember]
     //    public string Model { get; set; }
     //}
-
-
-
-
-
-
 
 }
