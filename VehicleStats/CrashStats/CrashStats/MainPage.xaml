@@ -9,18 +9,22 @@
     mc:Ignorable="d">
 
     <StackPanel>
-        <Button Content="Get Stats" Click="Button_Click" />
         <TextBlock x:Name="ResultTextBlock" />
-        <TextBlock x:Name="YearTextBlock" />
-        <TextBlock x:Name="MakeTextBlock" />
-        <TextBlock x:Name="ModelTextBlock" />
 
-        <!--Loaded="Page_Loaded"-->
         <!--https://www.c-sharpcorner.com/article/data-binding-in-xaml-uwp-using-combobox/-->
-        <ComboBox ItemsSource=""></ComboBox>
         <StackPanel Orientation="Horizontal" Margin="20">
-            <TextBlock>Select Year</TextBlock>
-            <ComboBox Name="ComboxBox1" ItemsSource="{x:Bind YearList}" Width="150" Margin="10,0"></ComboBox>
+            <TextBlock x:Name="txtBlockSelectYear">Select Year</TextBlock>
+            <ComboBox x:Name="lstYear" Visibility="Visible" SelectionChanged="Year_Selected" ItemsSource="{x:Bind YearList}" Width="150" Margin="10,0"></ComboBox>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Margin="20">
+            <TextBlock x:Name="txtBlockSelectMake" Visibility="Collapsed">Select Make</TextBlock>
+            <ComboBox ItemsSource="{x:Bind MakeList}" x:Name="lstMake" Visibility="Collapsed" SelectionChanged="Make_Selected" Width="150" Margin="10,0"></ComboBox>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Margin="20">
+            <TextBlock x:Name="txtBlockSelectModel" Visibility="Collapsed">Select Model</TextBlock>
+            <ComboBox x:Name="lstModel" Visibility="Collapsed" SelectionChanged="Model_Selected" ItemsSource="{x:Bind ModelList}" Width="150" Margin="10,0"></ComboBox>
         </StackPanel>
 
         <!--<Button Content="Get Stats" Click="Test" />

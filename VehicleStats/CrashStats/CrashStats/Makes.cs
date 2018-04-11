@@ -13,33 +13,34 @@ namespace CrashStats
 {
     class Makes
     {
-        //public static async Task<YearRootObject> GetMakes(string y){}
-        public static int[] modelYear = new int[999];
+        //public static async Task<MakeRootObject> GetMakes(string y){}
+        public string[] make = new string[99];
 
-        public static async Task<YearRootObject> GetYears()
+        public static async Task<MakeRootObject> GetMakes(string y)
         {
+            var url = "https://one.nhtsa.gov/webapi/api/SafetyRatings/modelyear/2007/make/";
+            var format = "?format=json";
+
+            url = string.Concat(url, y, format);
+            Debug.WriteLine("URL: " + url);
+
             var http = new HttpClient();
-            var response = await http.GetAsync("https://one.nhtsa.gov/webapi/api/SafetyRatings/?format=json");
+            var response = await http.GetAsync("https://one.nhtsa.gov/webapi/api/SafetyRatings/modelyear/2007/make/mazda/?format=json");
 
             var result = await response.Content.ReadAsStringAsync();
-            var serializer = new DataContractJsonSerializer(typeof(YearRootObject));
+            var serializer = new DataContractJsonSerializer(typeof(MakeRootObject));
 
             var ms = new MemoryStream(Encoding.UTF8.GetBytes(result));
-            var data = (YearRootObject)serializer.ReadObject(ms);
+            var data = (MakeRootObject)serializer.ReadObject(ms);
 
-            // int[] modelYear = new int[data.Results.Count()];
-            Debug.WriteLine("test")
- ;
-            // loop over, return ModelYear
-            for (int i = 0; i < data.Results.Count(); i++)
-            {
-                modelYear[i] = data.Results[i].ModelYear;
-                Debug.WriteLine("Year: " + modelYear[i]);
-            }
-
-            //modelYear = modelYear.Where(c => c != null).ToArray();
-
-            //modelYear = modelYear.Where(s => !String.IsNullOrEmpty(s)).ToArray();
+            // int[] make = new int[data.Results.Count()];
+            Debug.WriteLine("testing "+ data.Results.Count());
+            // loop over, return Make
+            //for (int i = 0; i <= data.Results.Count(); i++)
+            //{
+            //    make[i] = data.Results[i].Make;
+            //    Debug.WriteLine("Make: " + make[i]);
+            //}
             return data;
         }
     }
@@ -63,6 +64,6 @@ namespace CrashStats
         [DataMember]
         public string Message { get; set; }
         [DataMember]
-        public List<Result> Results { get; set; }
+        public List<MakeResult> Results { get; set; }
     }
 }

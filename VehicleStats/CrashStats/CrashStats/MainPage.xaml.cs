@@ -23,63 +23,43 @@ namespace CrashStats
     public sealed partial class MainPage : Page
     {
 
-        List<Students> StuList = new List<Students>();
-        List<int> YearList = new List<int>();
+        //ObservableCollection<int> YearList = new ObservableCollection<int>();
 
+        List<int> YearList = new List<int>();
+        List<int> MakeList = new List<int>();
+        List<int> ModelList = new List<int>();
 
         public MainPage()
         {
-
-            this.InitializeComponent();
-
-            StuList.Add(new Students()
-            {
-                ID = 1,
-                Name = "Ammar1"
-            });
-
-            // GetYears
-
             this.InitializeComponent();
         }
 
-        public static int[] modelYear = new int[999];
+        //private async void Button_Click(object sender, RoutedEventArgs e)
+        //{
+        //    RootObject myStats = await OpenStatsProxy.GetStats("honda", "civic", "2000");
+        //    YearRootObject years = await Years.GetYears();
 
-        private async void Button_Click(object sender, RoutedEventArgs e)
-        {
-            RootObject myStats = await OpenStatsProxy.GetStats("honda", "civic", "2000");
-            YearRootObject years = await Years.GetYears();
+        //    ResultTextBlock.Text = "Year: " + years.Results[0].ModelYear;
+        //    for (int i=0; i>years.Results.Count(); i++)
+        //    {
+        //        YearList.Add(years.Results[i].ModelYear);
+        //    }
+        //}
 
-            ResultTextBlock.Text = "Year: " + years.Results[0].ModelYear;
-            for (int i=0; i>years.Results.Count(); i++)
-            {
-
-                //modelYear[i] = years.Results[i].ModelYear;
-                //YearList.Insert(i, years.Results[i].ModelYear);
-                YearList.Add(years.Results[i].ModelYear);
-
-            }
-        }
-
-        private ObservableCollection<Result> Results = new ObservableCollection<Result>();
+        //private ObservableCollection<Result> Results = new ObservableCollection<Result>();
 
         private async System.Threading.Tasks.Task Page_LoadedAsync(object sender, RoutedEventArgs e)
         {
             YearRootObject myStats = await Years.GetYears();
 
-            //foreach (var year in await Years.GetYears("2000")) ;
-            //{
-            //    Results.Add(year);
-            //}
         }
-
 
         private async void Page_Loaded(object sender, RoutedEventArgs e)
         {
             YearRootObject years = await Years.GetYears();
 
-            ResultTextBlock.Text = "Year: " + years.Results[0].ModelYear;
-            for (int i = 0; i <= 29; i++)
+            // ResultTextBlock.Text = "Year: " + years.Results[0].ModelYear;
+            for (int i = 0; i <= years.Results.Count - 1; i++)
             {
                 YearList.Add(years.Results[i].ModelYear);
             }
@@ -87,26 +67,90 @@ namespace CrashStats
             {
                 Debug.WriteLine("Year: " + y);
             }
-           // Debug.WriteLine("YearList: " + YearList);
         }
 
-        //private async System.Threading.Tasks.Task MakeLoaded(object sender, RoutedEventArgs e)
-        //{
-        // MakeRootObject myStats = await Models.GetModels();
+        private async void Year_Selected(object sender, RoutedEventArgs e)
+        {
+            string s = "";
+            int selected = 0;
 
-        //foreach (var year in await Years.GetYears("2000")) ;
-        //{
-        //    Results.Add(year);
-        //}
-        //}
-        // private async System.Threading.Tasks.Task ModelLoaded(object sender, RoutedEventArgs e)
-        //{
-        //ModelRootObject myStats = await Makes.GetMakes();
+            // Get the ComboBox instance
+            ComboBox yearComboBox = sender as ComboBox;
+            selected = yearComboBox.SelectedIndex; // get index of year e.g. 2019 = 0
+            Debug.WriteLine("Selected: " + selected);
 
-        //foreach (var year in await Years.GetYears("2000")) ;
-        //{
-        //    Results.Add(year);
-        //}
-        //}
+            s = YearList[selected].ToString();
+           // MakeRootObject makes = await Makes.GetMakes(s);
+            //Makes.GetMakes(s);
+
+            // change to visible
+            lstMake.Visibility = Visibility.Visible;
+            txtBlockSelectMake.Visibility = Visibility.Visible;
+
+            // Get the ComboBox selected item value and display on TextBlock
+            //TextBlock1.Text += "Selected Year : " + yearComboBox.SelectedValue.ToString();
+            //YearRootObject years = await Years.GetYears();
+
+            //ResultTextBlock.Text = "Year: " + makes.Results[0].Make;
+            //for (int i = 0; i <= 29; i++)
+            //{
+            //    MakeList.Add(makes.Results[i].Make);
+            //}
+            //foreach (string mk in MakeList)
+            //{
+            //    Debug.WriteLine("Make: " + mk);
+            //}
+            // Debug.WriteLine("YearList: " + YearList);
+
+            MakeRootObject makes = await Makes.GetMakes("honda");
+
+            for (int i = 0; i <= makes.Results.Count-1; i++)
+            {
+            //    MakeList.Add(makes.Results[i].Make);
+            }
+            //foreach (string mk in MakeList)
+            //{
+            //    Debug.WriteLine("Make: " + mk);
+            //}
+        }
+
+        private async void Make_Selected(object sender, RoutedEventArgs e)
+        {
+            string s = "";
+            int selected = 0;
+
+            // Get the ComboBox instance
+            ComboBox makeComboBox = sender as ComboBox;
+            selected = makeComboBox.SelectedIndex; // get index of make e.g. acura = 0
+            Debug.WriteLine("Selected: " + selected);
+
+            s = MakeList[selected].ToString();
+            // MakeRootObject makes = await Makes.GetMakes(s);
+            //Makes.GetMakes(s);
+
+            // change to visible
+            lstModel.Visibility = Visibility.Visible;
+            txtBlockSelectModel.Visibility = Visibility.Visible;
+
+            // Get the ComboBox selected item value and display on TextBlock
+            //TextBlock1.Text += "Selected Year : " + yearComboBox.SelectedValue.ToString();
+            //YearRootObject years = await Years.GetYears();
+
+            //ResultTextBlock.Text = "Year: " + makes.Results[0].Make;
+            //for (int i = 0; i <= 29; i++)
+            //{
+            //    MakeList.Add(makes.Results[i].Make);
+            //}
+            //foreach (string mk in MakeList)
+            //{
+            //    Debug.WriteLine("Make: " + mk);
+            //}
+            // Debug.WriteLine("YearList: " + YearList);
+        }
+        private async void Model_Selected(object sender, RoutedEventArgs e)
+        {
+
+        }
+
     }
 }

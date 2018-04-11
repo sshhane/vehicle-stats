@@ -33,6 +33,6 @@ namespace CrashStats
         [DataMember]
         public string Message { get; set; }
         [DataMember]
-        public List<Result> Results { get; set; }
+        public List<ModelResult> Results { get; set; }
     }
 }

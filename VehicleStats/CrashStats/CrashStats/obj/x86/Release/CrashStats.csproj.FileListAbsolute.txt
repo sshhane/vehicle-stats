@@ -1,0 +1,11 @@
+D:\programing\vehicle-stats\VehicleStats\CrashStats\CrashStats\obj\x86\Release\CrashStats.csprojResolveAssemblyReference.cache
+D:\programing\vehicle-stats\VehicleStats\CrashStats\CrashStats\obj\x86\Release\App.g.i.cs
+D:\programing\vehicle-stats\VehicleStats\CrashStats\CrashStats\obj\x86\Release\App.g.cs
+D:\programing\vehicle-stats\VehicleStats\CrashStats\CrashStats\obj\x86\Release\MainPage.g.i.cs
+D:\programing\vehicle-stats\VehicleStats\CrashStats\CrashStats\obj\x86\Release\MainPage.g.cs
+D:\programing\vehicle-stats\VehicleStats\CrashStats\CrashStats\obj\x86\Release\XamlTypeInfo.g.cs
+D:\programing\vehicle-stats\VehicleStats\CrashStats\CrashStats\obj\x86\Release\App.xaml
+D:\programing\vehicle-stats\VehicleStats\CrashStats\CrashStats\obj\x86\Release\MainPage.xaml
+D:\programing\vehicle-stats\VehicleStats\CrashStats\CrashStats\obj\x86\Release\App.xbf
+D:\programing\vehicle-stats\VehicleStats\CrashStats\CrashStats\obj\x86\Release\MainPage.xbf
+D:\programing\vehicle-stats\VehicleStats\CrashStats\CrashStats\obj\x86\Release\XamlSaveStateFile.xml

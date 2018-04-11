@@ -26,9 +26,6 @@ namespace CrashStats
             var ms = new MemoryStream(Encoding.UTF8.GetBytes(result));
             var data = (YearRootObject)serializer.ReadObject(ms);
 
-            // int[] modelYear = new int[data.Results.Count()];
-            Debug.WriteLine("test")
- ;
             // loop over, return ModelYear
             for (int i = 0; i < data.Results.Count(); i++)
             {
@@ -36,9 +33,6 @@ namespace CrashStats
                 Debug.WriteLine("Year: " + modelYear[i]);
             }
 
-            //modelYear = modelYear.Where(c => c != null).ToArray();
-
-            //modelYear = modelYear.Where(s => !String.IsNullOrEmpty(s)).ToArray();
             return data;
         }
 
@@ -61,6 +55,6 @@ namespace CrashStats
         [DataMember]
         public string Message { get; set; }
         [DataMember]
-        public List<Result> Results { get; set; }
+        public List<YearResult> Results { get; set; }
     }
 }

@@ -9,18 +9,22 @@
     mc:Ignorable="d">
 
     <StackPanel>
-        <Button x:ConnectionId='2' Content="Get Stats"                      />
-        <TextBlock x:ConnectionId='3' x:Name="ResultTextBlock" />
-        <TextBlock x:ConnectionId='4' x:Name="YearTextBlock" />
-        <TextBlock x:ConnectionId='5' x:Name="MakeTextBlock" />
-        <TextBlock x:ConnectionId='6' x:Name="ModelTextBlock" />
+        <TextBlock x:ConnectionId='2' x:Name="ResultTextBlock" />
 
-        <!--Loaded="Page_Loaded"-->
         <!--https://www.c-sharpcorner.com/article/data-binding-in-xaml-uwp-using-combobox/-->
-        <ComboBox ItemsSource=""></ComboBox>
         <StackPanel Orientation="Horizontal" Margin="20">
-            <TextBlock>Select Year</TextBlock>
-            <ComboBox x:ConnectionId='7' Name="ComboxBox1"                                 Width="150" Margin="10,0"></ComboBox>
+            <TextBlock x:ConnectionId='7' x:Name="txtBlockSelectYear">Select Year</TextBlock>
+            <ComboBox x:ConnectionId='8' x:Name="lstYear" Visibility="Visible"                                                                  Width="150" Margin="10,0"></ComboBox>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Margin="20">
+            <TextBlock x:ConnectionId='5' x:Name="txtBlockSelectMake" Visibility="Collapsed">Select Make</TextBlock>
+            <ComboBox x:ConnectionId='6'                                 x:Name="lstMake" Visibility="Collapsed"                                  Width="150" Margin="10,0"></ComboBox>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Margin="20">
+            <TextBlock x:ConnectionId='3' x:Name="txtBlockSelectModel" Visibility="Collapsed">Select Model</TextBlock>
+            <ComboBox x:ConnectionId='4' x:Name="lstModel" Visibility="Collapsed"                                                                    Width="150" Margin="10,0"></ComboBox>
         </StackPanel>
 
         <!--<Button Content="Get Stats" Click="Test" />
