@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -26,12 +27,25 @@ namespace CrashStats
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            base.OnNavigatedTo(e);
+            this.vehicleId = e.Parameter.ToString();
+
+            // this.vehicleId = (string)e.Parameter;
+            // this.vehicleId = e.ToString();
+
         }
 
         public VehicleResultPage()
         {
             this.InitializeComponent();
+        }
+
+        private async void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            string url = "";
+            string make = "";
+
+            VehicleRootObject results = await VehicleResult.GetVehicleResult(url);
+            TxtBoxResult.Text = results.Results[0].Make;
         }
     }
 }

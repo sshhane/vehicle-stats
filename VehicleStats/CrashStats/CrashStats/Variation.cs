@@ -13,8 +13,6 @@ namespace CrashStats
 {
     class Variation
     {
-        public string[] model = new string[99];
-
         public static async Task<VariationRootObject> GetVariations(string y)
         {
             var url = "https://one.nhtsa.gov/webapi/api/SafetyRatings/modelyear/";

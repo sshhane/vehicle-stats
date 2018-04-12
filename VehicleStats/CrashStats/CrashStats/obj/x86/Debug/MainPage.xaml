@@ -25,7 +25,6 @@
                 </Grid.RowDefinitions>
         <TextBlock x:ConnectionId='3' x:Name="ResultTextBlock" />
 
-                <!--https://www.c-sharpcorner.com/article/data-binding-in-xaml-uwp-using-combobox/-->
                 <StackPanel Orientation="Horizontal" Margin="20" Grid.Row="0">
                     <ComboBox x:ConnectionId='6' x:Name="lstYear" Header="Select Year" Visibility="Visible"                                                                  Width="150" Margin="10,0"></ComboBox>
                 </StackPanel>

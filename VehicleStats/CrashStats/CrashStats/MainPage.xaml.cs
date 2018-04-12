@@ -39,8 +39,6 @@ namespace CrashStats
             this.InitializeComponent();
         }
 
-        //private ObservableCollection<Result> Results = new ObservableCollection<Result>();
-
         private async System.Threading.Tasks.Task Page_LoadedAsync(object sender, RoutedEventArgs e)
         {
             YearRootObject myStats = await Years.GetYears();
@@ -51,7 +49,6 @@ namespace CrashStats
         {
             YearRootObject years = await Years.GetYears();
 
-            // ResultTextBlock.Text = "Year: " + years.Results[0].ModelYear;
             for (int i = 0; i <= years.Results.Count - 1; i++)
             {
                 YearList.Add(years.Results[i].ModelYear);
@@ -63,6 +60,9 @@ namespace CrashStats
             string s = "";
             int selectedIndex = 0;
             int selectedValue = 0;
+
+            // reset url
+            selectedURL = "";
 
             // Get the ComboBox instance
             ComboBox yearComboBox = sender as ComboBox;
@@ -93,6 +93,9 @@ namespace CrashStats
             int selectedIndex = 0;
             string selectedValue = "";
 
+            // reset url
+            //selectedURL = "2000"; //TODO: change to a var
+
             // Get the ComboBox instance
             ComboBox makeComboBox = sender as ComboBox;
             selectedIndex = makeComboBox.SelectedIndex; // get index of year e.g. 2019 = 0
@@ -120,10 +123,12 @@ namespace CrashStats
             string desc = "";
             int selectedIndex = 0;
 
-            // Get the ComboBox instance
-            //ComboBox idComboBox = sender as ComboBox;
+            // reset url
+            //selectedURL = "2000/make/honda"; //TODO: change to a var
+
+            ComboBox idComboBox = sender as ComboBox;
             ListView lstViewVariation = sender as ListView;
-            //selectedIndex = idComboBox.SelectedIndex; // get index of year e.g. 2019 = 0
+            selectedIndex = idComboBox.SelectedIndex; // get index of year e.g. 2019 = 0
             //selectedIndex = lstViewVariation.SelectedIndex; // get index of year e.g. 2019 = 0
             //Debug.WriteLine("SelectedIndex: " + selectedIndex);
 
