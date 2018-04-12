@@ -46,8 +46,8 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
       <RootProperty Name="Visibility" />
-      <RootProperty Name="ItemsSource" />
       <RootProperty Name="Header" />
+      <RootProperty Name="ItemsSource" />
       <RootProperty Name="Width" />
       <RootProperty Name="Margin" />
       <RootEvent Name="SelectionChanged" />
@@ -56,12 +56,10 @@
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
       <RootProperty Name="ItemsSource" />
       <RootProperty Name="ItemTemplate" />
-      <RootProperty Name="Items" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.DataTemplate">
       <RootProperty Name="Template" />
     </RootType>
-    <RootType FullName="System.String" />
     <RootType FullName="CrashStats.MainPage" />
   </Roots.RootTypes>
 </Roots>

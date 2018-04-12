@@ -38,15 +38,10 @@
                     <ComboBox x:Name="lstModel" Visibility="Collapsed" SelectionChanged="Model_Selected" Header="Select Model" ItemsSource="{x:Bind ModelList}" Width="150" Margin="10,0"></ComboBox>
                 </StackPanel>
 
-                <!--TODO: add VId-->
-                <StackPanel Orientation="Horizontal" Margin="20" Grid.Row="3">
-                    <ComboBox x:Name="lstVariant" Visibility="Collapsed" SelectionChanged="Variant_Selected" ItemsSource="{x:Bind VariantList}" Header="Select Variation" Width="150" Margin="10,0"></ComboBox>
-                </StackPanel>
-
             </Grid>
         </SplitView.Pane>
 
-        <ListView x:Name="listView1" ItemsSource="{x:Bind VariantList}">
+        <ListView x:Name="lstViewVariation" ItemsSource="{x:Bind VariantList}">
             <ListView.ItemTemplate>
                 <DataTemplate x:DataType="local:VariationResult">
                     <Grid>
@@ -55,16 +50,11 @@
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
                         <TextBlock Tag="{x:Bind VehicleId}" Text="{x:Bind VehicleDescription}" Foreground="Teal" 
-                           FontSize="15" Grid.Column="1"/>
+                           FontSize="15" Grid.Column="1" Tapped="TextBlock_Tapped"/>
                     </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>
-            <!--TODO:change to variant list-->
-            <x:String>Item 1</x:String>
-            <x:String>Item 2</x:String>
-            <x:String>Item 3</x:String>
-            <x:String>Item 4</x:String>
-            <x:String>Item 5</x:String>
+
         </ListView>
 
     </SplitView>

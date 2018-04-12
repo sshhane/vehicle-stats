@@ -28,7 +28,7 @@ namespace CrashStats
         List<int> YearList = new List<int>();
         List<string> MakeList = new List<string>();
         List<string> ModelList = new List<string>();
-        List<string> VariantList = new List<string>();
+        private ObservableCollection<VariationResult> VariantList = new ObservableCollection<VariationResult>();
 
         // vars
         string selectedURL = ""; //TODO: add reset
@@ -123,34 +123,36 @@ namespace CrashStats
         }
         private async void Model_Selected(object sender, RoutedEventArgs e)
         {
-            string desc = "";
+            string id = "";
             int selectedIndex = 0;
-            string selectedValue = "";
 
             // Get the ComboBox instance
-            ComboBox idComboBox = sender as ComboBox;
-            selectedIndex = idComboBox.SelectedIndex; // get index of year e.g. 2019 = 0
-            Debug.WriteLine("SelectedIndex: " + selectedIndex);
+            //ComboBox idComboBox = sender as ComboBox;
+            ListView lstViewVariation = sender as ListView;
+            //selectedIndex = idComboBox.SelectedIndex; // get index of year e.g. 2019 = 0
+            //selectedIndex = lstViewVariation.SelectedIndex; // get index of year e.g. 2019 = 0
+            //Debug.WriteLine("SelectedIndex: " + selectedIndex);
 
             // get value at pos selected
             //selectedValue = VariantList[0];
             //Debug.WriteLine("SelectedValue: " + selectedValue);
 
-            desc = ModelList[selectedIndex];
-
             // update selected
-            selectedURL = string.Concat(selectedURL, "/model/", desc);
+            selectedURL = string.Concat(selectedURL, "/model/", id);
             Debug.WriteLine("SelectedURL: " + selectedURL);
 
-            // change to visible
-            lstVariant.Visibility = Visibility.Visible;
+            VariationRootObject variations = await Variation.GetVariations(selectedURL); // "<year>/make/", <make>
 
-            VariationRootObject ids = await Variation.GetVariations(selectedURL); // "<year>/make/", <make>
-
-            for (int i = 0; i <= ids.Results.Count - 1; i++)
+            for (int i = 0; i <= variations.Results.Count - 1; i++)
             {
-                VariantList.Add(ids.Results[i].VehicleDescription);
+                VariantList.Add(new VariationResult {
+                    VehicleDescription = variations.Results[i].VehicleDescription,
+                    VehicleId = variations.Results[i].VehicleId
+                });
+
             }
+
+
         }
         private async void Variant_Selected(object sender, RoutedEventArgs e)
         {
@@ -183,6 +185,13 @@ namespace CrashStats
             //{
             //    VariantList.Add(ids.Results[i].Model);
             //}
+        }
+
+        private void TextBlock_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            var vId = ((TextBlock)sender).Tag;
+
+            Frame.Navigate(typeof(VehicleResultPage), vId);
         }
     }
 }
