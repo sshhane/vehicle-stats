@@ -41,11 +41,11 @@ namespace CrashStats
 
         private async void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            string url = "";
+            string url = "4873";
             string make = "";
 
             VehicleRootObject results = await VehicleResult.GetVehicleResult(url);
-            TxtBoxResult.Text = results.Results[0].Make;
+            TxtBoxResult.Text = results.Results[0].Model;
         }
     }
 }

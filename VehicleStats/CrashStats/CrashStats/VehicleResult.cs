@@ -17,7 +17,7 @@ namespace CrashStats
 
         public static async Task<VehicleRootObject> GetVehicleResult(string y)
         {
-            var url = "https://one.nhtsa.gov/webapi/api/vehicleid/";
+            var url = "https://one.nhtsa.gov/webapi/api/SafetyRatings/vehicleid/";
             var format = "?format=json";
 
             url = string.Concat(url, y);
@@ -34,7 +34,7 @@ namespace CrashStats
             var ms = new MemoryStream(Encoding.UTF8.GetBytes(result));
             var data = (VehicleRootObject)serializer.ReadObject(ms);
 
-            Debug.WriteLine("data.Results.Count: " + data.Results.Count());
+            Debug.WriteLine("data.Results[0]: " + data.Results[0].Make);
 
             return data;
         }

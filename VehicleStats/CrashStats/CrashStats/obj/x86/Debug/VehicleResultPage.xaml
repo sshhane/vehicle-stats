@@ -9,7 +9,7 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+        <TextBlock x:ConnectionId='2' Name="TxtBoxResult" Text="make" Foreground="Teal" FontSize="15" Margin="395,87,-395,-87"/>
     </Grid>
 </Page>
 
