@@ -11,11 +11,11 @@ using System.Threading.Tasks;
 
 namespace CrashStats
 {
-    class VehicleId
+    class Variation
     {
         public string[] model = new string[99];
 
-        public static async Task<ModelRootObject> GetModels(string y)
+        public static async Task<VariationRootObject> GetVariations(string y)
         {
             var url = "https://one.nhtsa.gov/webapi/api/SafetyRatings/modelyear/";
             var format = "?format=json";
@@ -23,25 +23,25 @@ namespace CrashStats
             url = string.Concat(url, y);
             url = string.Concat(url, format);
 
-            Debug.WriteLine("URL: " + url);
+            Debug.WriteLine("Variations URL: " + url);
 
             var http = new HttpClient();
             var response = await http.GetAsync(url);
 
             var result = await response.Content.ReadAsStringAsync();
-            var serializer = new DataContractJsonSerializer(typeof(ModelRootObject));
+            var serializer = new DataContractJsonSerializer(typeof(VariationRootObject));
 
             var ms = new MemoryStream(Encoding.UTF8.GetBytes(result));
-            var data = (ModelRootObject)serializer.ReadObject(ms);
+            var data = (VariationRootObject)serializer.ReadObject(ms);
 
-            Debug.WriteLine("testing " + data.Results.Count());
+            Debug.WriteLine("data.Results.Count: " + data.Results.Count());
 
             return data;
         }
     }
 
     [DataContract]
-    public class IdResult
+    public class VariationResult
     {
         [DataMember]
         public string VehicleDescription { get; set; }
@@ -50,13 +50,13 @@ namespace CrashStats
     }
 
     [DataContract]
-    public class IdRootObject
+    public class VariationRootObject
     {
         [DataMember]
         public int Count { get; set; }
         [DataMember]
         public string Message { get; set; }
         [DataMember]
-        public List<IdResult> Results { get; set; }
+        public List<VariationResult> Results { get; set; }
     }
 }

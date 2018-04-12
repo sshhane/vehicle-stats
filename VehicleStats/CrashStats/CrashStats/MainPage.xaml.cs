@@ -81,7 +81,6 @@ namespace CrashStats
 
             // change to visible
             lstMake.Visibility = Visibility.Visible;
-            txtBlockSelectMake.Visibility = Visibility.Visible;
 
             MakeRootObject makes = await Makes.GetMakes(s); //TODO:change to variable
 
@@ -114,7 +113,6 @@ namespace CrashStats
 
             // change to visible
             lstModel.Visibility = Visibility.Visible;
-            txtBlockSelectModel.Visibility = Visibility.Visible;
 
             ModelRootObject models = await Models.GetModels(selectedURL); // "<year>/make/", <make>
 
@@ -146,33 +144,32 @@ namespace CrashStats
 
             // change to visible
             lstVariant.Visibility = Visibility.Visible;
-            txtBlockSelectVariant.Visibility = Visibility.Visible;
 
-            ModelRootObject ids = await Models.GetModels(selectedURL); // "<year>/make/", <make>
+            VariationRootObject ids = await Variation.GetVariations(selectedURL); // "<year>/make/", <make>
 
             for (int i = 0; i <= ids.Results.Count - 1; i++)
             {
-                VariantList.Add(ids.Results[i].Model);
+                VariantList.Add(ids.Results[i].VehicleDescription);
             }
         }
         private async void Variant_Selected(object sender, RoutedEventArgs e)
         {
-            //string desc = "";
+            string desc = "";
             //int selectedIndex = 0;
             //string selectedValue = "";
 
             //// Get the ComboBox instance
-            //ComboBox idComboBox = sender as ComboBox;
-            //selectedIndex = idComboBox.SelectedIndex; // get index of year e.g. 2019 = 0
-            //Debug.WriteLine("SelectedIndex: " + selectedIndex);
+            ListView idListView = sender as ListView;
+            //selectedIndex = idListView.SelectedIndex; // get index of year e.g. 2019 = 0 
+            //Debug.WriteLine("SelectedIndex: " + selectedIndex); 
 
             //// get value at pos selected
             //Debug.WriteLine("SelectedValue: " + selectedValue);
 
             //desc = ModelList[selectedIndex]; //TODO: displayed value needs to be VehicleDescription , need to get VehicleId
 
-            //// update selected
-            //selectedURL = string.Concat("/vehicleid/", desc);
+            // update selected
+            selectedURL = string.Concat("/vehicleid/", desc);
             //Debug.WriteLine("SelectedURL: " + selectedURL);
 
             ////TODO: update for VID
@@ -180,7 +177,7 @@ namespace CrashStats
             //lstVariant.Visibility = Visibility.Visible;
             //txtBlockSelectVariant.Visibility = Visibility.Visible;
 
-            //ModelRootObject ids = await Models.GetModels(selectedURL); // "<year>/make/", <make>
+            //ModelRootObject ids = await Models.GetVariations(selectedURL); // "<year>/make/", <make>
 
             //for (int i = 0; i <= ids.Results.Count - 1; i++)
             //{

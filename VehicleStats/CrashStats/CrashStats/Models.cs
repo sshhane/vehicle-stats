@@ -34,7 +34,7 @@ namespace CrashStats
             var ms = new MemoryStream(Encoding.UTF8.GetBytes(result));
             var data = (ModelRootObject)serializer.ReadObject(ms);
 
-            Debug.WriteLine("testing " + data.Results.Count());
+            Debug.WriteLine("data.Results.Count: " + data.Results.Count());
 
             return data;
         }

@@ -22,7 +22,6 @@
       <RootProperty Name="ColumnDefinitions" />
       <RootProperty Name="RowDefinitions" />
       <RootProperty Name="Children" />
-      <RootProperty Name="Visibility" />
       <RootMethod Name="GetRow" />
       <RootMethod Name="SetRow" />
       <RootMethod Name="GetColumn" />
@@ -35,8 +34,7 @@
       <RootProperty Name="Height" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
-      <RootProperty Name="Visibility" />
-      <RootProperty Name="Inlines" />
+      <RootProperty Name="Tag" />
       <RootProperty Name="Text" />
       <RootProperty Name="Foreground" />
       <RootProperty Name="FontSize" />
@@ -49,12 +47,14 @@
     <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
       <RootProperty Name="Visibility" />
       <RootProperty Name="ItemsSource" />
+      <RootProperty Name="Header" />
       <RootProperty Name="Width" />
       <RootProperty Name="Margin" />
       <RootEvent Name="SelectionChanged" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.BindExtension" />
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
+      <RootProperty Name="ItemsSource" />
       <RootProperty Name="ItemTemplate" />
       <RootProperty Name="Items" />
     </RootType>
