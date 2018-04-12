@@ -138,7 +138,7 @@ namespace CrashStats
             //selectedValue = VariantList[0];
             //Debug.WriteLine("SelectedValue: " + selectedValue);
 
-            desc = MakeList[selectedIndex]; //TODO: displayed value needs to be VehicleDescription , need to get VehicleId
+            desc = ModelList[selectedIndex]; //TODO: displayed value needs to be VehicleDescription , need to get VehicleId
 
             // update selected
             selectedURL = string.Concat(selectedURL, "/model/", desc);
