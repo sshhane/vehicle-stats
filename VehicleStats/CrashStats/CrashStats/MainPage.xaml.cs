@@ -67,17 +67,14 @@ namespace CrashStats
             // Get the ComboBox instance
             ComboBox yearComboBox = sender as ComboBox;
             selectedIndex = yearComboBox.SelectedIndex; // get index of year e.g. 2019 = 0
-            Debug.WriteLine("SelectedIndex: " + selectedIndex);
 
             // get value at pos selected
             selectedValue = YearList[selectedIndex];
-            Debug.WriteLine("SelectedValue: " + selectedValue);
 
             s = YearList[selectedIndex].ToString();
 
             // update selected
             selectedURL = string.Concat(selectedURL, s);
-            Debug.WriteLine("SelectedURL: " + selectedURL);
 
             // change to visible
             lstMake.Visibility = Visibility.Visible;
@@ -99,17 +96,14 @@ namespace CrashStats
             // Get the ComboBox instance
             ComboBox makeComboBox = sender as ComboBox;
             selectedIndex = makeComboBox.SelectedIndex; // get index of year e.g. 2019 = 0
-            Debug.WriteLine("SelectedIndex: " + selectedIndex);
 
             // get value at pos selected
             selectedValue = MakeList[selectedIndex];
-            Debug.WriteLine("SelectedValue: " + selectedValue);
 
             mk = MakeList[selectedIndex];
 
             // update selected
             selectedURL = string.Concat(selectedURL, "/make/", mk);
-            Debug.WriteLine("SelectedURL: " + selectedURL);
 
             // change to visible
             lstModel.Visibility = Visibility.Visible;
@@ -123,7 +117,7 @@ namespace CrashStats
         }
         private async void Model_Selected(object sender, RoutedEventArgs e)
         {
-            string id = "";
+            string desc = "";
             int selectedIndex = 0;
 
             // Get the ComboBox instance
@@ -137,8 +131,10 @@ namespace CrashStats
             //selectedValue = VariantList[0];
             //Debug.WriteLine("SelectedValue: " + selectedValue);
 
+            desc = ModelList[selectedIndex];
+
             // update selected
-            selectedURL = string.Concat(selectedURL, "/model/", id);
+            selectedURL = string.Concat(selectedURL, "/model/", desc);
             Debug.WriteLine("SelectedURL: " + selectedURL);
 
             VariationRootObject variations = await Variation.GetVariations(selectedURL); // "<year>/make/", <make>
@@ -151,40 +147,6 @@ namespace CrashStats
                 });
 
             }
-
-
-        }
-        private async void Variant_Selected(object sender, RoutedEventArgs e)
-        {
-            string desc = "";
-            //int selectedIndex = 0;
-            //string selectedValue = "";
-
-            //// Get the ComboBox instance
-            ListView idListView = sender as ListView;
-            //selectedIndex = idListView.SelectedIndex; // get index of year e.g. 2019 = 0 
-            //Debug.WriteLine("SelectedIndex: " + selectedIndex); 
-
-            //// get value at pos selected
-            //Debug.WriteLine("SelectedValue: " + selectedValue);
-
-            //desc = ModelList[selectedIndex]; //TODO: displayed value needs to be VehicleDescription , need to get VehicleId
-
-            // update selected
-            selectedURL = string.Concat("/vehicleid/", desc);
-            //Debug.WriteLine("SelectedURL: " + selectedURL);
-
-            ////TODO: update for VID
-            //// change to visible
-            //lstVariant.Visibility = Visibility.Visible;
-            //txtBlockSelectVariant.Visibility = Visibility.Visible;
-
-            //ModelRootObject ids = await Models.GetVariations(selectedURL); // "<year>/make/", <make>
-
-            //for (int i = 0; i <= ids.Results.Count - 1; i++)
-            //{
-            //    VariantList.Add(ids.Results[i].Model);
-            //}
         }
 
         private void TextBlock_Tapped(object sender, TappedRoutedEventArgs e)

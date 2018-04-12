@@ -384,3 +384,8 @@ D:\programing\vehicle-stats\VehicleStats\CrashStats\CrashStats\obj\x86\Debug\qua
 D:\programing\vehicle-stats\VehicleStats\CrashStats\CrashStats\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 D:\programing\vehicle-stats\VehicleStats\CrashStats\CrashStats\obj\x86\Debug\ProjectArchitectures.txt
 D:\programing\vehicle-stats\VehicleStats\CrashStats\CrashStats\obj\x86\Debug\CrashStats.csprojResolveAssemblyReference.cache
+D:\programing\vehicle-stats\VehicleStats\CrashStats\CrashStats\bin\x86\Debug\VehicleResultPage.xbf
+D:\programing\vehicle-stats\VehicleStats\CrashStats\CrashStats\obj\x86\Debug\VehicleResultPage.g.i.cs
+D:\programing\vehicle-stats\VehicleStats\CrashStats\CrashStats\obj\x86\Debug\VehicleResultPage.g.cs
+D:\programing\vehicle-stats\VehicleStats\CrashStats\CrashStats\obj\x86\Debug\VehicleResultPage.xaml
+D:\programing\vehicle-stats\VehicleStats\CrashStats\CrashStats\obj\x86\Debug\VehicleResultPage.xbf
