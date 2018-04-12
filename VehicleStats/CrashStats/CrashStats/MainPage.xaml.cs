@@ -55,10 +55,6 @@ namespace CrashStats
             {
                 YearList.Add(years.Results[i].ModelYear);
             }
-            foreach (int y in YearList)
-            {
-                Debug.WriteLine("Year: " + y);
-            }
         }
 
         private async void Year_Selected(object sender, RoutedEventArgs e)
@@ -111,35 +107,20 @@ namespace CrashStats
 
             mk = MakeList[selectedIndex];
 
+            // update selected
+            selectedURL = string.Concat(selectedURL, "/make/", mk);
+            Debug.WriteLine("SelectedURL: " + selectedURL);
+
             // change to visible
             lstModel.Visibility = Visibility.Visible;
             txtBlockSelectModel.Visibility = Visibility.Visible;
 
-            // Get the ComboBox selected item value and display on TextBlock
-            //TextBlock1.Text += "Selected Year : " + yearComboBox.SelectedValue.ToString();
-            //YearRootObject years = await Years.GetYears();
-
-            //ResultTextBlock.Text = "Year: " + makes.Results[0].Make;
-            for (int i = 0; i <= 29; i++)
-            {
-            //    MakeList.Add(makes.Results[i].Make);
-            }
-            //foreach (string mk in MakeList)
-            //{
-            //    Debug.WriteLine("SelectedURL: " + selectedURL);
-            //}
-            // Debug.WriteLine("YearList: " + YearList);
-
-            ModelRootObject models = await Models.GetModels(selectedURL, mk); // change to y, mk
+            ModelRootObject models = await Models.GetModels(selectedURL); // "<year>/make/", <make>
 
             for (int i = 0; i <= models.Results.Count - 1; i++)
             {
                 ModelList.Add(models.Results[i].Model);
             }
-            //foreach (string mk in MakeList)
-            //{
-            //    Debug.WriteLine("Make: " + mk);
-            //}
         }
         private async void Model_Selected(object sender, RoutedEventArgs e)
         {

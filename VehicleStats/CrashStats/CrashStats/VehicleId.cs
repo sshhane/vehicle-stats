@@ -11,18 +11,20 @@ using System.Threading.Tasks;
 
 namespace CrashStats
 {
-    class Models
+    class VehicleId
     {
         public string[] model = new string[99];
 
-        public static async Task<ModelRootObject> GetModels(string y)
+        public static async Task<ModelRootObject> GetModels(string y, string mk, string mdl)
         {
             var url = "https://one.nhtsa.gov/webapi/api/SafetyRatings/modelyear/";
             var format = "?format=json";
-            //var make = "/make/";
+            var make = "/make/";
+            var model = "/model/";
 
-            url = string.Concat(url, y);
-            url = string.Concat(url, format);
+            url = string.Concat(url, y, make, mk);
+            url = string.Concat(url, model, mdl);
+            url = string.Concat(format);
 
             //url = string.Concat(url, mk, format);
             Debug.WriteLine("URL: " + url);
@@ -43,26 +45,23 @@ namespace CrashStats
     }
 
     [DataContract]
-    public class ModelResult
+    public class IdResult
     {
-        [DataMember]
         public int ModelYear { get; set; }
-        [DataMember]
         public string Make { get; set; }
-        [DataMember]
         public string Model { get; set; }
         [DataMember]
         public int VehicleId { get; set; }
     }
 
     [DataContract]
-    public class ModelRootObject
+    public class IdRootObject
     {
         [DataMember]
         public int Count { get; set; }
         [DataMember]
         public string Message { get; set; }
         [DataMember]
-        public List<ModelResult> Results { get; set; }
+        public List<IdResult> Results { get; set; }
     }
 }

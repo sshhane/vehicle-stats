@@ -99,6 +99,7 @@
     <Compile Include="Makes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Student.cs" />
+    <Compile Include="VehicleId.cs" />
     <Compile Include="Years.cs" />
   </ItemGroup>
   <ItemGroup>
