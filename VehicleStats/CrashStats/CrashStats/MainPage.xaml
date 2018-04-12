@@ -8,7 +8,7 @@
     Loaded="Page_Loaded"
     mc:Ignorable="d">
 
-    <StackPanel>
+    <Grid Background="Gray">
         <TextBlock x:Name="ResultTextBlock" />
 
         <!--https://www.c-sharpcorner.com/article/data-binding-in-xaml-uwp-using-combobox/-->
@@ -33,6 +33,5 @@
             <ComboBox x:Name="lstVariant" Visibility="Collapsed" SelectionChanged="Variant_Selected" ItemsSource="{x:Bind VariantList}" Width="150" Margin="10,0"></ComboBox>
         </StackPanel>
         <!--<TextBlock x:Name="txtBlockSelectModel" Visibility="Collapsed">Select Model</TextBlock>-->
-
-    </StackPanel>
+    </Grid>
 </Page>

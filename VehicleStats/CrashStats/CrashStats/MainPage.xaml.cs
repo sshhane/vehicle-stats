@@ -138,13 +138,12 @@ namespace CrashStats
             //selectedValue = VariantList[0];
             //Debug.WriteLine("SelectedValue: " + selectedValue);
 
-            desc = ModelList[selectedIndex]; //TODO: displayed value needs to be VehicleDescription , need to get VehicleId
+            desc = ModelList[selectedIndex];
 
             // update selected
             selectedURL = string.Concat(selectedURL, "/model/", desc);
             Debug.WriteLine("SelectedURL: " + selectedURL);
 
-            //TODO: update for VID
             // change to visible
             lstVariant.Visibility = Visibility.Visible;
             txtBlockSelectVariant.Visibility = Visibility.Visible;
@@ -158,7 +157,35 @@ namespace CrashStats
         }
         private async void Variant_Selected(object sender, RoutedEventArgs e)
         {
-            //selectedURL = string.Concat("/vehicleid/", vId);
+            //string desc = "";
+            //int selectedIndex = 0;
+            //string selectedValue = "";
+
+            //// Get the ComboBox instance
+            //ComboBox idComboBox = sender as ComboBox;
+            //selectedIndex = idComboBox.SelectedIndex; // get index of year e.g. 2019 = 0
+            //Debug.WriteLine("SelectedIndex: " + selectedIndex);
+
+            //// get value at pos selected
+            //Debug.WriteLine("SelectedValue: " + selectedValue);
+
+            //desc = ModelList[selectedIndex]; //TODO: displayed value needs to be VehicleDescription , need to get VehicleId
+
+            //// update selected
+            //selectedURL = string.Concat("/vehicleid/", desc);
+            //Debug.WriteLine("SelectedURL: " + selectedURL);
+
+            ////TODO: update for VID
+            //// change to visible
+            //lstVariant.Visibility = Visibility.Visible;
+            //txtBlockSelectVariant.Visibility = Visibility.Visible;
+
+            //ModelRootObject ids = await Models.GetModels(selectedURL); // "<year>/make/", <make>
+
+            //for (int i = 0; i <= ids.Results.Count - 1; i++)
+            //{
+            //    VariantList.Add(ids.Results[i].Model);
+            //}
         }
     }
 }
