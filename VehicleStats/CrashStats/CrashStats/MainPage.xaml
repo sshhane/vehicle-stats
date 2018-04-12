@@ -8,30 +8,70 @@
     Loaded="Page_Loaded"
     mc:Ignorable="d">
 
-    <Grid Background="Gray">
+    <SplitView x:Name="splitView" PaneBackground="{ThemeResource SystemControlBackgroundChromeMediumLowBrush}" IsPaneOpen="True" OpenPaneLength="260" CompactPaneLength="48" DisplayMode="Inline">
+        <SplitView.Pane>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
         <TextBlock x:Name="ResultTextBlock" />
 
-        <!--https://www.c-sharpcorner.com/article/data-binding-in-xaml-uwp-using-combobox/-->
-        <StackPanel Orientation="Horizontal" Margin="20">
-            <TextBlock x:Name="txtBlockSelectYear">Select Year</TextBlock>
-            <ComboBox x:Name="lstYear" Visibility="Visible" SelectionChanged="Year_Selected" ItemsSource="{x:Bind YearList}" Width="150" Margin="10,0"></ComboBox>
-        </StackPanel>
+                <!--https://www.c-sharpcorner.com/article/data-binding-in-xaml-uwp-using-combobox/-->
+                <StackPanel Orientation="Horizontal" Margin="20" Grid.Row="0">
+                    <TextBlock  x:Name="txtBlockSelectYear">Select Year</TextBlock>
+                    <ComboBox x:Name="lstYear" Visibility="Visible" SelectionChanged="Year_Selected" ItemsSource="{x:Bind YearList}" Width="150" Margin="10,0"></ComboBox>
+                </StackPanel>
 
-        <StackPanel Orientation="Horizontal" Margin="20">
-            <TextBlock x:Name="txtBlockSelectMake" Visibility="Collapsed">Select Make</TextBlock>
-            <ComboBox ItemsSource="{x:Bind MakeList}" x:Name="lstMake" Visibility="Collapsed" SelectionChanged="Make_Selected" Width="150" Margin="10,0"></ComboBox>
-        </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="20" Grid.Row="1">
+                    <TextBlock x:Name="txtBlockSelectMake" Visibility="Collapsed">Select Make</TextBlock>
+                    <ComboBox ItemsSource="{x:Bind MakeList}" x:Name="lstMake" Visibility="Collapsed" SelectionChanged="Make_Selected" Width="150" Margin="10,0"></ComboBox>
+                </StackPanel>
 
-        <StackPanel Orientation="Horizontal" Margin="20">
-            <TextBlock x:Name="txtBlockSelectModel" Visibility="Collapsed">Select Model</TextBlock>
-            <ComboBox x:Name="lstModel" Visibility="Collapsed" SelectionChanged="Model_Selected" ItemsSource="{x:Bind ModelList}" Width="150" Margin="10,0"></ComboBox>
-        </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="20" Grid.Row="2" >
+                    <TextBlock x:Name="txtBlockSelectModel" Visibility="Collapsed" >Select Model</TextBlock>
+                    <ComboBox x:Name="lstModel" Visibility="Collapsed" SelectionChanged="Model_Selected" ItemsSource="{x:Bind ModelList}" Width="150" Margin="10,0"></ComboBox>
+                </StackPanel>
 
-        <!--TODO: add VId-->
-        <StackPanel Orientation="Horizontal" Margin="20">
-            <TextBlock x:Name="txtBlockSelectVariant" Visibility="Collapsed">Select Variant</TextBlock>
-            <ComboBox x:Name="lstVariant" Visibility="Collapsed" SelectionChanged="Variant_Selected" ItemsSource="{x:Bind VariantList}" Width="150" Margin="10,0"></ComboBox>
-        </StackPanel>
-        <!--<TextBlock x:Name="txtBlockSelectModel" Visibility="Collapsed">Select Model</TextBlock>-->
-    </Grid>
+                <!--TODO: add VId-->
+                <StackPanel Orientation="Horizontal" Margin="20" Grid.Row="3">
+                    <TextBlock x:Name="txtBlockSelectVariant" Visibility="Collapsed">Select Variant</TextBlock>
+                    <ComboBox x:Name="lstVariant" Visibility="Collapsed" SelectionChanged="Variant_Selected" ItemsSource="{x:Bind VariantList}" Width="150" Margin="10,0"></ComboBox>
+                </StackPanel>
+
+            </Grid>
+        </SplitView.Pane>
+
+        <ListView x:Name="listView1">
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="x:String">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="47"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="{x:Bind}" Foreground="Teal" 
+                           FontSize="15" Grid.Column="1"/>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            <!--TODO:change to variant list-->
+            <x:String>Item 1</x:String>
+            <x:String>Item 2</x:String>
+            <x:String>Item 3</x:String>
+            <x:String>Item 4</x:String>
+            <x:String>Item 5</x:String>
+        </ListView>
+
+    </SplitView>
+    
+
 </Page>
