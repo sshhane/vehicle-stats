@@ -27,5 +27,12 @@
             <ComboBox x:Name="lstModel" Visibility="Collapsed" SelectionChanged="Model_Selected" ItemsSource="{x:Bind ModelList}" Width="150" Margin="10,0"></ComboBox>
         </StackPanel>
 
+        <!--TODO: add VId-->
+        <StackPanel Orientation="Horizontal" Margin="20">
+            <TextBlock x:Name="txtBlockSelectVariant" Visibility="Collapsed">Select Variant</TextBlock>
+            <ComboBox x:Name="lstVariant" Visibility="Collapsed" SelectionChanged="Variant_Selected" ItemsSource="{x:Bind VariantList}" Width="150" Margin="10,0"></ComboBox>
+        </StackPanel>
+        <!--<TextBlock x:Name="txtBlockSelectModel" Visibility="Collapsed">Select Model</TextBlock>-->
+
     </StackPanel>
 </Page>

@@ -30,7 +30,6 @@ namespace CrashStats
             for (int i = 0; i < data.Results.Count(); i++)
             {
                 modelYear[i] = data.Results[i].ModelYear;
-                Debug.WriteLine("Year: " + modelYear[i]);
             }
 
             return data;

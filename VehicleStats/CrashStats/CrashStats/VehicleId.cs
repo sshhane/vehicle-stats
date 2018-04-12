@@ -15,18 +15,14 @@ namespace CrashStats
     {
         public string[] model = new string[99];
 
-        public static async Task<ModelRootObject> GetModels(string y, string mk, string mdl)
+        public static async Task<ModelRootObject> GetModels(string y)
         {
             var url = "https://one.nhtsa.gov/webapi/api/SafetyRatings/modelyear/";
             var format = "?format=json";
-            var make = "/make/";
-            var model = "/model/";
 
-            url = string.Concat(url, y, make, mk);
-            url = string.Concat(url, model, mdl);
-            url = string.Concat(format);
+            url = string.Concat(url, y);
+            url = string.Concat(url, format);
 
-            //url = string.Concat(url, mk, format);
             Debug.WriteLine("URL: " + url);
 
             var http = new HttpClient();
@@ -47,9 +43,8 @@ namespace CrashStats
     [DataContract]
     public class IdResult
     {
-        public int ModelYear { get; set; }
-        public string Make { get; set; }
-        public string Model { get; set; }
+        [DataMember]
+        public string VehicleDescription { get; set; }
         [DataMember]
         public int VehicleId { get; set; }
     }

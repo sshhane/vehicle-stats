@@ -19,13 +19,11 @@ namespace CrashStats
         {
             var url = "https://one.nhtsa.gov/webapi/api/SafetyRatings/modelyear/";
             var format = "?format=json";
-            //var make = "/make/";
 
             url = string.Concat(url, y);
             url = string.Concat(url, format);
 
-            //url = string.Concat(url, mk, format);
-            Debug.WriteLine("URL: " + url);
+            Debug.WriteLine("Model, URL: " + url);
 
             var http = new HttpClient();
             var response = await http.GetAsync(url);

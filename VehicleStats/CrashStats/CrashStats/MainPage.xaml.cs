@@ -28,6 +28,7 @@ namespace CrashStats
         List<int> YearList = new List<int>();
         List<string> MakeList = new List<string>();
         List<string> ModelList = new List<string>();
+        List<string> VariantList = new List<string>();
 
         // vars
         string selectedURL = ""; //TODO: add reset
@@ -124,8 +125,40 @@ namespace CrashStats
         }
         private async void Model_Selected(object sender, RoutedEventArgs e)
         {
+            string desc = "";
+            int selectedIndex = 0;
+            string selectedValue = "";
 
+            // Get the ComboBox instance
+            ComboBox idComboBox = sender as ComboBox;
+            selectedIndex = idComboBox.SelectedIndex; // get index of year e.g. 2019 = 0
+            Debug.WriteLine("SelectedIndex: " + selectedIndex);
+
+            // get value at pos selected
+            //selectedValue = VariantList[0];
+            //Debug.WriteLine("SelectedValue: " + selectedValue);
+
+            desc = MakeList[selectedIndex]; //TODO: displayed value needs to be VehicleDescription , need to get VehicleId
+
+            // update selected
+            selectedURL = string.Concat(selectedURL, "/model/", desc);
+            Debug.WriteLine("SelectedURL: " + selectedURL);
+
+            //TODO: update for VID
+            // change to visible
+            lstVariant.Visibility = Visibility.Visible;
+            txtBlockSelectVariant.Visibility = Visibility.Visible;
+
+            ModelRootObject ids = await Models.GetModels(selectedURL); // "<year>/make/", <make>
+
+            for (int i = 0; i <= ids.Results.Count - 1; i++)
+            {
+                VariantList.Add(ids.Results[i].Model);
+            }
         }
-
+        private async void Variant_Selected(object sender, RoutedEventArgs e)
+        {
+            //selectedURL = string.Concat("/vehicleid/", vId);
+        }
     }
 }

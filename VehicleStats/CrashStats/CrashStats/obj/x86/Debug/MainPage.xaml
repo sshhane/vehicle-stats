@@ -13,19 +13,26 @@
 
         <!--https://www.c-sharpcorner.com/article/data-binding-in-xaml-uwp-using-combobox/-->
         <StackPanel Orientation="Horizontal" Margin="20">
-            <TextBlock x:ConnectionId='7' x:Name="txtBlockSelectYear">Select Year</TextBlock>
-            <ComboBox x:ConnectionId='8' x:Name="lstYear" Visibility="Visible"                                                                  Width="150" Margin="10,0"></ComboBox>
+            <TextBlock x:ConnectionId='9' x:Name="txtBlockSelectYear">Select Year</TextBlock>
+            <ComboBox x:ConnectionId='10' x:Name="lstYear" Visibility="Visible"                                                                  Width="150" Margin="10,0"></ComboBox>
         </StackPanel>
 
         <StackPanel Orientation="Horizontal" Margin="20">
-            <TextBlock x:ConnectionId='5' x:Name="txtBlockSelectMake" Visibility="Collapsed">Select Make</TextBlock>
-            <ComboBox x:ConnectionId='6'                                 x:Name="lstMake" Visibility="Collapsed"                                  Width="150" Margin="10,0"></ComboBox>
+            <TextBlock x:ConnectionId='7' x:Name="txtBlockSelectMake" Visibility="Collapsed">Select Make</TextBlock>
+            <ComboBox x:ConnectionId='8'                                 x:Name="lstMake" Visibility="Collapsed"                                  Width="150" Margin="10,0"></ComboBox>
         </StackPanel>
 
         <StackPanel Orientation="Horizontal" Margin="20">
-            <TextBlock x:ConnectionId='3' x:Name="txtBlockSelectModel" Visibility="Collapsed">Select Model</TextBlock>
-            <ComboBox x:ConnectionId='4' x:Name="lstModel" Visibility="Collapsed"                                                                    Width="150" Margin="10,0"></ComboBox>
+            <TextBlock x:ConnectionId='5' x:Name="txtBlockSelectModel" Visibility="Collapsed">Select Model</TextBlock>
+            <ComboBox x:ConnectionId='6' x:Name="lstModel" Visibility="Collapsed"                                                                    Width="150" Margin="10,0"></ComboBox>
         </StackPanel>
+
+        <!--TODO: add VId-->
+        <StackPanel Orientation="Horizontal" Margin="20">
+            <TextBlock x:ConnectionId='3' x:Name="txtBlockSelectVariant" Visibility="Collapsed">Select Variant</TextBlock>
+            <ComboBox x:ConnectionId='4' x:Name="lstVariant" Visibility="Collapsed"                                                                        Width="150" Margin="10,0"></ComboBox>
+        </StackPanel>
+        <!--<TextBlock x:Name="txtBlockSelectModel" Visibility="Collapsed">Select Model</TextBlock>-->
 
     </StackPanel>
 </Page>
