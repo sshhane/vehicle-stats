@@ -57,16 +57,27 @@ namespace CrashStats
             this.scprRating.DataContext = new RatingViewModel() { RatingValue = scprR };
             this.rollRating.DataContext = new RatingViewModel() { RatingValue = rollR };
 
-            TxtBoxMk.Text = results.Results[0].Make;
-            TxtBoxMdl.Text = results.Results[0].Model;
             TxtBoxDesc.Text = results.Results[0].VehicleDescription;
 
-            TxtBoxFcdr.Text = "Front crash driver side rating: " + results.Results[0].FrontCrashDriversideRating;
-            TxtBoxFcpr.Text = "Front crash passenger side rating: " + results.Results[0].FrontCrashPassengersideRating;
-            TxtBoxScdr.Text = "Side crash driver side rating: " + results.Results[0].SideCrashDriversideRating;
-            TxtBoxScpr.Text = "Side crash passenger side rating: " + results.Results[0].SideCrashPassengersideRating;
-            TxtBoxRoll.Text = "Rollover rating: " + results.Results[0].RolloverRating2;
+            TxtBoxFcdr.Text = "Front crash driver side rating: ";
+            TxtBoxFcpr.Text = "Front crash passenger side rating: ";
+            TxtBoxScdr.Text = "Side crash driver side rating: ";
+            TxtBoxScpr.Text = "Side crash passenger side rating: ";
+            TxtBoxRoll.Text = "Rollover rating: ";
             TxtBoxComplaints.Text = "Complaints: " + results.Results[0].ComplaintsCount.ToString();
+            if(results.Results[0].SideCrashPicture != null)
+            {
+                ImgCarCrash.Source = new BitmapImage(new Uri(results.Results[0].SideCrashPicture));
+                Debug.WriteLine("in if");
+            }
+            else 
+            {
+                //ImgCarCrash.Source = new BitmapImage(new Uri("ms-appx:///Assets/img/default.jpg"));
+                Debug.WriteLine("in else");
+                Debug.WriteLine("URL: " + results.Results[0].SideCrashPicture);
+
+            }
+
 
 
             // string icon = String.Format("", results.Results[0].SideCrashPicture);
