@@ -9,6 +9,7 @@ Display vehicle test crash info from NHTSA API
 ## Getting Started
 
 Visual Studio 2017 is needed to run.
+Windows store link: https://www.microsoft.com/store/apps/9NR33FCLQW33
 
 You must clone the repository using:
 ```
