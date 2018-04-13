@@ -1,0 +1,2 @@
+MainPackage=D:\programing\vehicle-stats\VehicleStats\CrashStats\CrashStats\bin\ARM\Release\CrashStats_1.1.0.0_ARM.appx
+SymbolPackage=D:\programing\vehicle-stats\VehicleStats\CrashStats\CrashStats\AppPackages\CrashStats_1.1.0.0_Test\CrashStats_1.1.0.0_ARM.appxsym

@@ -337,6 +337,15 @@
     <AppxPackagedFile Include="C:\Users\shane\.nuget\packages\system.xml.xmlserializer\4.0.10\lib\netcore50\System.Xml.XmlSerializer.dll">
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\programing\vehicle-stats\VehicleStats\CrashStats\CrashStats\Assets\crash.gif">
+      <PackagePath>Assets\crash.gif</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\programing\vehicle-stats\VehicleStats\CrashStats\CrashStats\Assets\default.jpg">
+      <PackagePath>Assets\default.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\programing\vehicle-stats\VehicleStats\CrashStats\CrashStats\Assets\dummy.jpg">
+      <PackagePath>Assets\dummy.jpg</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\programing\vehicle-stats\VehicleStats\CrashStats\CrashStats\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>

@@ -64,8 +64,9 @@ namespace CrashStats
             TxtBoxScdr.Text = "Side crash driver side rating: ";
             TxtBoxScpr.Text = "Side crash passenger side rating: ";
             TxtBoxRoll.Text = "Rollover rating: ";
-            TxtBoxComplaints.Text = "Complaints: " + results.Results[0].ComplaintsCount.ToString();
-            if(results.Results[0].SideCrashPicture != null)
+            TxtBoxComplaints.Text = results.Results[0].ComplaintsCount.ToString();
+            TxtBoxRecalls.Text = results.Results[0].InvestigationCount.ToString();
+            if (results.Results[0].SideCrashPicture != null)
             {
                 ImgCarCrash.Source = new BitmapImage(new Uri(results.Results[0].SideCrashPicture));
                 Debug.WriteLine("in if");
@@ -78,9 +79,6 @@ namespace CrashStats
 
             }
 
-
-
-            // string icon = String.Format("", results.Results[0].SideCrashPicture);
         }
 
     }

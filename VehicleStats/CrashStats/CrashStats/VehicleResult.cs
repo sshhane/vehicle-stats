@@ -67,6 +67,7 @@ public class VehicleResult
     public string NHTSALaneDepartureWarning { get; set; }
     [DataMember]
     public int ComplaintsCount { get; set; }
+    [DataMember]
     public int RecallsCount { get; set; }
     public int InvestigationCount { get; set; }
     public int ModelYear { get; set; }

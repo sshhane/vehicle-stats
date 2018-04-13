@@ -8,69 +8,50 @@
     Loaded="Page_Loaded"
     mc:Ignorable="d">
 
-    <!--<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition />
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition />
-        </Grid.RowDefinitions>
-        <TextBlock Name="TxtBoxMk" Text="" Foreground="Teal" FontSize="15" Grid.Row="1"/>
-        <TextBlock Name="TxtBoxMdl" Text="" Foreground="Teal" FontSize="15" Grid.Row="2"/>
-        <TextBlock Name="TxtBoxDesc" Text="" Foreground="Teal" FontSize="15" Grid.Row="3"/>
-
-    </Grid>-->
     <StackPanel x:Name="StackResults" Orientation="Vertical" Background="Gainsboro">
-        <Image x:Name="ImgCarCrash" Stretch="Uniform"></Image>
-        <TextBlock Name="TxtBoxDesc" Text="" Foreground="Teal" FontSize="15"/>
 
-        <Grid Background="White" Margin="150,0,601,0">
+        <Grid>
+            <Image Source="Assets/dummy.jpg"></Image>
+            <TextBlock Name="TxtBoxDesc" Text="" Foreground="Black" FontSize="60" Padding="50,50,50,0" />
+        </Grid>
+        <Image x:Name="ImgCarCrash" Stretch="Uniform" Grid.Column="0" Grid.Row="0"></Image>
+
+        <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto" />
-                <ColumnDefinition Width="Auto" />
-                <ColumnDefinition Width="Auto" />
-                <ColumnDefinition Width="Auto" />
-                <ColumnDefinition />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
                 <RowDefinition />
             </Grid.RowDefinitions>
 
-            <TextBlock Name="TxtBoxFcdr" Text="" Foreground="Teal" FontSize="15" Grid.Column="0" Grid.Row="0" />
-            <TextBlock Name="TxtBoxFcpr" Text="" Foreground="Teal" FontSize="15" Grid.Column="0" Grid.Row="1" />
-            <TextBlock Name="TxtBoxScdr" Text="" Foreground="Teal" FontSize="15" Grid.Column="0" Grid.Row="2" />
-            <TextBlock Name="TxtBoxScpr" Text="" Foreground="Teal" FontSize="15" Grid.Column="0" Grid.Row="3" />
-            <TextBlock Name="TxtBoxRoll" Text="" Foreground="Teal" FontSize="15" Grid.Column="0" Grid.Row="4" />
+            <StackPanel  Background="White"  Grid.Column="0" Grid.Row="0" >
+                <TextBlock Name="TxtBoxFcdr" Text="" Foreground="Teal" FontSize="30" Padding="60, 10, 0, 5"/>
+                <TextBlock Name="TxtBoxFcpr" Text="" Foreground="Teal" FontSize="30" Padding="60, 10, 0, 5"/>
+                <TextBlock Name="TxtBoxScdr" Text="" Foreground="Teal" FontSize="30" Padding="60, 10, 0, 5"/>
+                <TextBlock Name="TxtBoxScpr" Text="" Foreground="Teal" FontSize="30" Padding="60, 10, 0, 5"/>
+                <TextBlock Name="TxtBoxRoll" Text="" Foreground="Teal" FontSize="30" Padding="60, 10, 0, 5"/>
 
-            <RatingControl Width="120" Height="40" Value="{Binding RatingValue}" x:Name="fcdrRating" IsReadOnly="True" Grid.Column="1" Grid.Row="0" />
-            <RatingControl Width="120" Height="40" Value="{Binding RatingValue}" x:Name="fcprRating" IsReadOnly="True" Grid.Column="1" Grid.Row="1" />
-            <RatingControl Width="120" Height="40" Value="{Binding RatingValue}" x:Name="scdrRating" IsReadOnly="True" Grid.Column="1" Grid.Row="2" />
-            <RatingControl Width="120" Height="40" Value="{Binding RatingValue}" x:Name="scprRating" IsReadOnly="True" Grid.Column="1" Grid.Row="3" />
-            <RatingControl Width="120" Height="40" Value="{Binding RatingValue}" x:Name="rollRating" IsReadOnly="True" Grid.Column="1" Grid.Row="4" />
+            </StackPanel>
+            <Viewbox Grid.Column="1" Grid.Row="0" Width="500" Height="300">
+                <StackPanel>
+                    <RatingControl Value="{Binding RatingValue}" x:Name="fcdrRating" IsReadOnly="True" />
+                    <RatingControl Value="{Binding RatingValue}" x:Name="fcprRating" IsReadOnly="True" />
+                    <RatingControl Value="{Binding RatingValue}" x:Name="scdrRating" IsReadOnly="True" />
+                    <RatingControl Value="{Binding RatingValue}" x:Name="scprRating" IsReadOnly="True" />
+                    <RatingControl Value="{Binding RatingValue}" x:Name="rollRating" IsReadOnly="True" />
+                </StackPanel>
+            </Viewbox>
+            <StackPanel Grid.Column="0" Grid.Row="1" Background="white">
+                <TextBlock Text="Complaints: " Foreground="Teal" FontSize="30" Padding="60, 10, 0, 5"/>
+                <TextBlock Text="Recalls: " Foreground="Teal" FontSize="30" Padding="60, 5, 0, 5"/>
+            </StackPanel>
+            <StackPanel Grid.Column="1" Grid.Row="1">
+                <TextBlock Name="TxtBoxComplaints" Text="" Foreground="Teal" FontSize="30" HorizontalAlignment="Center" Padding="0, 10, 0, 5"/>
+                <TextBlock Name="TxtBoxRecalls" Text="" Foreground="Teal" FontSize="30" HorizontalAlignment="Center" Padding="0, 5, 0, 5"/>
+
+            </StackPanel>
         </Grid>
-        
-        <!--<RatingControl Width="120" Height="40" Value="{Binding RatingValue}" x:Name="fcdrRating" IsReadOnly="True"/>
-        <RatingControl Width="120" Height="40" Value="{Binding RatingValue}" x:Name="fcprRating" IsReadOnly="True"/>
-        <RatingControl Width="120" Height="40" Value="{Binding RatingValue}" x:Name="scdrRating" IsReadOnly="True"/>
-        <RatingControl Width="120" Height="40" Value="{Binding RatingValue}" x:Name="scprRating" IsReadOnly="True"/>
-        <RatingControl Width="120" Height="40" Value="{Binding RatingValue}" x:Name="rollRating" IsReadOnly="True"/>-->
-
-        <!--<TextBlock Name="TxtBoxFcdr" Text="" Foreground="Teal" FontSize="15"/>
-        <TextBlock Name="TxtBoxFcpr" Text="" Foreground="Teal" FontSize="15"/>
-        <TextBlock Name="TxtBoxScdr" Text="" Foreground="Teal" FontSize="15"/>
-        <TextBlock Name="TxtBoxScpr" Text="" Foreground="Teal" FontSize="15"/>
-        <TextBlock Name="TxtBoxRoll" Text="" Foreground="Teal" FontSize="15"/>-->
-
-        <TextBlock Name="TxtBoxComplaints" Text="" Foreground="Teal" FontSize="15"/>
     </StackPanel>
 </Page>

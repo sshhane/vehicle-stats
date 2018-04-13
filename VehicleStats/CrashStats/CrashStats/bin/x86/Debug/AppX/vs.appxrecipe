@@ -31,13 +31,13 @@
     <AppXManifest Include="D:\programing\vehicle-stats\VehicleStats\CrashStats\CrashStats\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-04-13T19:47:39.101</Modified>
+      <Modified>2018-04-13T21:31:46.179</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\programing\vehicle-stats\VehicleStats\CrashStats\CrashStats\bin\x86\Debug\CrashStats.exe">
       <PackagePath>entrypoint\CrashStats.exe</PackagePath>
-      <Modified>2018-04-13T19:47:38.765</Modified>
+      <Modified>2018-04-13T21:31:45.768</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shane\.nuget\packages\microsoft.csharp\4.0.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -451,6 +451,18 @@
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
       <Modified>2015-07-22T22:11:12.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\programing\vehicle-stats\VehicleStats\CrashStats\CrashStats\Assets\crash.gif">
+      <PackagePath>Assets\crash.gif</PackagePath>
+      <Modified>2018-04-13T20:22:31.598</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\programing\vehicle-stats\VehicleStats\CrashStats\CrashStats\Assets\default.jpg">
+      <PackagePath>Assets\default.jpg</PackagePath>
+      <Modified>2018-04-13T19:06:56.964</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\programing\vehicle-stats\VehicleStats\CrashStats\CrashStats\Assets\dummy.jpg">
+      <PackagePath>Assets\dummy.jpg</PackagePath>
+      <Modified>2018-04-13T20:32:19.843</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\programing\vehicle-stats\VehicleStats\CrashStats\CrashStats\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
       <Modified>2018-04-10T17:00:56.000</Modified>
@@ -491,7 +503,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\programing\vehicle-stats\VehicleStats\CrashStats\CrashStats\bin\x86\Debug\CrashStats.xr.xml">
       <PackagePath>CrashStats.xr.xml</PackagePath>
-      <Modified>2018-04-13T17:43:55.284</Modified>
+      <Modified>2018-04-13T21:31:45.648</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.16299.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -500,11 +512,11 @@
     <AppxPackagedFile Include="D:\programing\vehicle-stats\VehicleStats\CrashStats\CrashStats\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-04-13T18:48:05.025</Modified>
+      <Modified>2018-04-13T21:31:46.059</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\programing\vehicle-stats\VehicleStats\CrashStats\CrashStats\bin\x86\Debug\Core\CrashStats.exe">
       <PackagePath>CrashStats.exe</PackagePath>
-      <Modified>2018-04-13T19:47:39.096</Modified>
+      <Modified>2018-04-13T21:31:46.178</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

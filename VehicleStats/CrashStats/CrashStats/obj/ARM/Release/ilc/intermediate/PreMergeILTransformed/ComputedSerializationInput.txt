@@ -1,0 +1,5 @@
+"/t:CrashStats.ModelRootObject,CrashStats,json"
+"/t:CrashStats.MakeRootObject,CrashStats,json"
+"/t:CrashStats.VariationRootObject,CrashStats,json"
+"/t:VehicleRootObject,CrashStats,json"
+"/t:CrashStats.YearRootObject,CrashStats,json"

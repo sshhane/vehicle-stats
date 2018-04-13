@@ -28,8 +28,7 @@ namespace CrashStats
         List<string> ModelList = new List<string>();
         private ObservableCollection<VariationResult> VariantList = new ObservableCollection<VariationResult>();
 
-        // vars
-        string selectedURL = ""; //TODO: add reset
+        string selectedURL = "";
 
 
         public MainPage()
@@ -91,9 +90,6 @@ namespace CrashStats
             int selectedIndex = 0;
             string selectedValue = "";
 
-            // reset url
-            //selectedURL = "2000"; //TODO: change to a var
-
             // Get the ComboBox instance
             ComboBox makeComboBox = sender as ComboBox;
             selectedIndex = makeComboBox.SelectedIndex; // get index of year e.g. 2019 = 0
@@ -120,9 +116,6 @@ namespace CrashStats
         {
             string desc = "";
             int selectedIndex = 0;
-
-            // reset url
-            //selectedURL = "2000/make/honda"; //TODO: change to a var
 
             ComboBox idComboBox = sender as ComboBox;
             ListView lstViewVariation = sender as ListView;
