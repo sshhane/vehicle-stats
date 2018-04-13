@@ -5,45 +5,58 @@
     xmlns:local="using:CrashStats"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Loaded="Page_Loaded"
     mc:Ignorable="d">
 
-    <StackPanel>
-        <Button Content="Get Stats" Click="Button_Click" />
+    <SplitView PaneBackground="{ThemeResource SystemControlBackgroundChromeMediumLowBrush}" IsPaneOpen="True" OpenPaneLength="260" CompactPaneLength="48" DisplayMode="Inline">
+        <SplitView.Pane>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
         <TextBlock x:Name="ResultTextBlock" />
-        <TextBlock x:Name="YearTextBlock" />
-        <TextBlock x:Name="MakeTextBlock" />
-        <TextBlock x:Name="ModelTextBlock" />
 
-        <Button Content="Year">
-            <Button.Flyout>
-                <MenuFlyout>
-                    <MenuFlyoutItem Text="2000" Click="YearFly"></MenuFlyoutItem>
-                    <MenuFlyoutItem Text="2001"></MenuFlyoutItem>
-                    <MenuFlyoutItem Text="2002"></MenuFlyoutItem>
-                </MenuFlyout>
-            </Button.Flyout>
-        </Button>
+                <StackPanel Orientation="Horizontal" Margin="20" Grid.Row="0">
+                    <ComboBox x:Name="lstYear" Header="Select Year" Visibility="Visible" SelectionChanged="Year_Selected" ItemsSource="{x:Bind YearList}" Width="150" Margin="10,0"></ComboBox>
+                </StackPanel>
 
-        <Button Content="Make">
-            <Button.Flyout>
-                <MenuFlyout>
-                    <MenuFlyoutItem Text="Acura" Click="MakeFly"></MenuFlyoutItem>
-                    <MenuFlyoutItem Text="Toyota"></MenuFlyoutItem>
-                </MenuFlyout>
-            </Button.Flyout>
-        </Button>
+                <StackPanel Orientation="Horizontal" Margin="20" Grid.Row="1">
+                    <ComboBox ItemsSource="{x:Bind MakeList}" x:Name="lstMake" Visibility="Collapsed" Header="Select Make" SelectionChanged="Make_Selected" Width="150" Margin="10,0"></ComboBox>
+                </StackPanel>
 
-        <Button Content="Model">
-            <Button.Flyout>
-                <MenuFlyout>
-                    <MenuFlyoutItem Text="Integra" Click="ModelFly"></MenuFlyoutItem>
-                    <MenuFlyoutItem Text="Supra"></MenuFlyoutItem>
-                </MenuFlyout>
-            </Button.Flyout>
-        </Button>
+                <StackPanel Orientation="Horizontal" Margin="20" Grid.Row="2" >
+                    <ComboBox x:Name="lstModel" Visibility="Collapsed" SelectionChanged="Model_Selected" Header="Select Model" ItemsSource="{x:Bind ModelList}" Width="150" Margin="10,0"></ComboBox>
+                </StackPanel>
 
-        <Button Content="Get Stats" Click="Test" />
-        <TextBlock x:Name="TestTextBlock" />
-        
-    </StackPanel>
+            </Grid>
+        </SplitView.Pane>
+
+        <ListView x:Name="lstViewVariation" ItemsSource="{x:Bind VariantList}">
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="local:VariationResult">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="47"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Tag="{x:Bind VehicleId}" Text="{x:Bind VehicleDescription}" Foreground="Teal" 
+                           FontSize="15" Grid.Column="1" Tapped="TextBlock_Tapped"/>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
+
+    </SplitView>
+    
+
 </Page>

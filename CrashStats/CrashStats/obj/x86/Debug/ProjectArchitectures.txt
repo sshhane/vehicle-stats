@@ -1,1 +1,1 @@
-\\gwscistud.gmadtree.gmit.ie\stud\g00332592\documents\visual studio 2015\Projects\CrashStats\CrashStats\CrashStats.csproj;x86
+D:\programing\vehicle-stats\VehicleStats\CrashStats\CrashStats\CrashStats.csproj;x86
