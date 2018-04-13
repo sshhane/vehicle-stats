@@ -31,11 +31,11 @@
         <TextBlock Name="TxtBoxMdl" Text="" Foreground="Teal" FontSize="15"/>
         <TextBlock Name="TxtBoxDesc" Text="" Foreground="Teal" FontSize="15"/>
         
-        <RatingControl Width="120" Height="40" Value="{Binding RatingValue}" x:Name="fcdrRating"/>
-        <RatingControl Width="120" Height="40" Value="{Binding RatingValue}" x:Name="fcprRating"/>
-        <RatingControl Width="120" Height="40" Value="{Binding RatingValue}" x:Name="scdrRating"/>
-        <RatingControl Width="120" Height="40" Value="{Binding RatingValue}" x:Name="scprRating"/>
-        <RatingControl Width="120" Height="40" Value="{Binding RatingValue}" x:Name="rollRating"/>
+        <RatingControl Width="120" Height="40" Value="{Binding RatingValue}" x:Name="fcdrRating" IsReadOnly="True"/>
+        <RatingControl Width="120" Height="40" Value="{Binding RatingValue}" x:Name="fcprRating" IsReadOnly="True"/>
+        <RatingControl Width="120" Height="40" Value="{Binding RatingValue}" x:Name="scdrRating" IsReadOnly="True"/>
+        <RatingControl Width="120" Height="40" Value="{Binding RatingValue}" x:Name="scprRating" IsReadOnly="True"/>
+        <RatingControl Width="120" Height="40" Value="{Binding RatingValue}" x:Name="rollRating" IsReadOnly="True"/>
 
         <TextBlock Name="TxtBoxFcdr" Text="" Foreground="Teal" FontSize="15"/>
 

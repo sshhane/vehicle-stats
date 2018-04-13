@@ -31,13 +31,13 @@
     <AppXManifest Include="D:\programing\vehicle-stats\VehicleStats\CrashStats\CrashStats\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-04-13T16:12:11.117</Modified>
+      <Modified>2018-04-13T16:25:42.582</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\programing\vehicle-stats\VehicleStats\CrashStats\CrashStats\bin\x86\Debug\CrashStats.exe">
       <PackagePath>entrypoint\CrashStats.exe</PackagePath>
-      <Modified>2018-04-13T16:12:10.952</Modified>
+      <Modified>2018-04-13T16:25:42.172</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shane\.nuget\packages\microsoft.csharp\4.0.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -491,7 +491,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\programing\vehicle-stats\VehicleStats\CrashStats\CrashStats\bin\x86\Debug\CrashStats.xr.xml">
       <PackagePath>CrashStats.xr.xml</PackagePath>
-      <Modified>2018-04-13T15:54:25.889</Modified>
+      <Modified>2018-04-13T16:25:12.578</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.16299.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -500,11 +500,11 @@
     <AppxPackagedFile Include="D:\programing\vehicle-stats\VehicleStats\CrashStats\CrashStats\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-04-13T16:07:06.335</Modified>
+      <Modified>2018-04-13T16:25:42.461</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\programing\vehicle-stats\VehicleStats\CrashStats\CrashStats\bin\x86\Debug\Core\CrashStats.exe">
       <PackagePath>CrashStats.exe</PackagePath>
-      <Modified>2018-04-13T16:12:11.115</Modified>
+      <Modified>2018-04-13T16:25:42.580</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

@@ -27,7 +27,6 @@ namespace CrashStats
         List<string> MakeList = new List<string>();
         List<string> ModelList = new List<string>();
         private ObservableCollection<VariationResult> VariantList = new ObservableCollection<VariationResult>();
-        public int rating = 3;//test
 
         // vars
         string selectedURL = ""; //TODO: add reset
@@ -128,12 +127,6 @@ namespace CrashStats
             ComboBox idComboBox = sender as ComboBox;
             ListView lstViewVariation = sender as ListView;
             selectedIndex = idComboBox.SelectedIndex; // get index of year e.g. 2019 = 0
-            //selectedIndex = lstViewVariation.SelectedIndex; // get index of year e.g. 2019 = 0
-            //Debug.WriteLine("SelectedIndex: " + selectedIndex);
-
-            // get value at pos selected
-            //selectedValue = VariantList[0];
-            //Debug.WriteLine("SelectedValue: " + selectedValue);
 
             desc = ModelList[selectedIndex];
 

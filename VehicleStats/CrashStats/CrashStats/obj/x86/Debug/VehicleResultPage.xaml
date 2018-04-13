@@ -31,11 +31,11 @@
         <TextBlock x:ConnectionId='4' Name="TxtBoxMdl" Text="" Foreground="Teal" FontSize="15"/>
         <TextBlock x:ConnectionId='5' Name="TxtBoxDesc" Text="" Foreground="Teal" FontSize="15"/>
         
-        <RatingControl x:ConnectionId='6' Width="120" Height="40" Value="{Binding RatingValue}" x:Name="fcdrRating"/>
-        <RatingControl x:ConnectionId='7' Width="120" Height="40" Value="{Binding RatingValue}" x:Name="fcprRating"/>
-        <RatingControl x:ConnectionId='8' Width="120" Height="40" Value="{Binding RatingValue}" x:Name="scdrRating"/>
-        <RatingControl x:ConnectionId='9' Width="120" Height="40" Value="{Binding RatingValue}" x:Name="scprRating"/>
-        <RatingControl x:ConnectionId='10' Width="120" Height="40" Value="{Binding RatingValue}" x:Name="rollRating"/>
+        <RatingControl x:ConnectionId='6' Width="120" Height="40" Value="{Binding RatingValue}" x:Name="fcdrRating" IsReadOnly="True"/>
+        <RatingControl x:ConnectionId='7' Width="120" Height="40" Value="{Binding RatingValue}" x:Name="fcprRating" IsReadOnly="True"/>
+        <RatingControl x:ConnectionId='8' Width="120" Height="40" Value="{Binding RatingValue}" x:Name="scdrRating" IsReadOnly="True"/>
+        <RatingControl x:ConnectionId='9' Width="120" Height="40" Value="{Binding RatingValue}" x:Name="scprRating" IsReadOnly="True"/>
+        <RatingControl x:ConnectionId='10' Width="120" Height="40" Value="{Binding RatingValue}" x:Name="rollRating" IsReadOnly="True"/>
 
         <TextBlock x:ConnectionId='11' Name="TxtBoxFcdr" Text="" Foreground="Teal" FontSize="15"/>
 
