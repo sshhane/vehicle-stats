@@ -51,7 +51,9 @@ public class VehicleResult
     [DataMember]
     public string FrontCrashPassengersideRating { get; set; }
     public string OverallSideCrashRating { get; set; }
+    [DataMember]
     public string SideCrashDriversideRating { get; set; }
+    [DataMember]
     public string SideCrashPassengersideRating { get; set; }
     public string SideCrashPicture { get; set; }
     public string RolloverRating { get; set; }
@@ -63,6 +65,7 @@ public class VehicleResult
     public string NHTSAElectronicStabilityControl { get; set; }
     public string NHTSAForwardCollisionWarning { get; set; }
     public string NHTSALaneDepartureWarning { get; set; }
+    [DataMember]
     public int ComplaintsCount { get; set; }
     public int RecallsCount { get; set; }
     public int InvestigationCount { get; set; }
@@ -85,4 +88,14 @@ public class VehicleRootObject
     public string Message { get; set; }
     [DataMember]
     public List<VehicleResult> Results { get; set; }
+}
+
+
+public class RatingViewModel
+{
+    public double RatingValue
+    {
+        get;
+        set;
+    }
 }

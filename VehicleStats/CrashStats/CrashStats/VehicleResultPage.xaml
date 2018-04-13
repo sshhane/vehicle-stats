@@ -8,7 +8,42 @@
     Loaded="Page_Loaded"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBlock Name="TxtBoxResult" Text="make" Foreground="Teal" FontSize="15" Margin="395,87,-395,-87"/>
-    </Grid>
+    <!--<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <TextBlock Name="TxtBoxMk" Text="" Foreground="Teal" FontSize="15" Grid.Row="1"/>
+        <TextBlock Name="TxtBoxMdl" Text="" Foreground="Teal" FontSize="15" Grid.Row="2"/>
+        <TextBlock Name="TxtBoxDesc" Text="" Foreground="Teal" FontSize="15" Grid.Row="3"/>
+
+    </Grid>-->
+    <StackPanel x:Name="StackResults" Orientation="Vertical" Background="Gainsboro">
+        <TextBlock Name="TxtBoxMk" Text="" Foreground="Teal" FontSize="15"/>
+        <TextBlock Name="TxtBoxMdl" Text="" Foreground="Teal" FontSize="15"/>
+        <TextBlock Name="TxtBoxDesc" Text="" Foreground="Teal" FontSize="15"/>
+        
+        <RatingControl Width="120" Height="40" Value="{Binding RatingValue}" x:Name="fcdrRating"/>
+        <RatingControl Width="120" Height="40" Value="{Binding RatingValue}" x:Name="fcprRating"/>
+        <RatingControl Width="120" Height="40" Value="{Binding RatingValue}" x:Name="scdrRating"/>
+        <RatingControl Width="120" Height="40" Value="{Binding RatingValue}" x:Name="scprRating"/>
+        <RatingControl Width="120" Height="40" Value="{Binding RatingValue}" x:Name="rollRating"/>
+
+        <TextBlock Name="TxtBoxFcdr" Text="" Foreground="Teal" FontSize="15"/>
+
+        <TextBlock Name="TxtBoxFcpr" Text="" Foreground="Teal" FontSize="15"/>
+        <TextBlock Name="TxtBoxScdr" Text="" Foreground="Teal" FontSize="15"/>
+        <TextBlock Name="TxtBoxScpr" Text="" Foreground="Teal" FontSize="15"/>
+        <TextBlock Name="TxtBoxRoll" Text="" Foreground="Teal" FontSize="15"/>
+
+        <TextBlock Name="TxtBoxComplaints" Text="" Foreground="Teal" FontSize="15"/>
+    </StackPanel>
 </Page>

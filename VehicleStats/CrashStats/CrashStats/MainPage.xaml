@@ -8,7 +8,7 @@
     Loaded="Page_Loaded"
     mc:Ignorable="d">
 
-    <SplitView x:Name="splitView" PaneBackground="{ThemeResource SystemControlBackgroundChromeMediumLowBrush}" IsPaneOpen="True" OpenPaneLength="260" CompactPaneLength="48" DisplayMode="Inline">
+    <SplitView PaneBackground="{ThemeResource SystemControlBackgroundChromeMediumLowBrush}" IsPaneOpen="True" OpenPaneLength="260" CompactPaneLength="48" DisplayMode="Inline">
         <SplitView.Pane>
             <Grid>
                 <Grid.ColumnDefinitions>
@@ -23,6 +23,7 @@
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
+        <TextBlock Text="{x:Bind rating}"></TextBlock>
         <TextBlock x:Name="ResultTextBlock" />
 
                 <StackPanel Orientation="Horizontal" Margin="20" Grid.Row="0">
@@ -35,6 +36,11 @@
 
                 <StackPanel Orientation="Horizontal" Margin="20" Grid.Row="2" >
                     <ComboBox x:Name="lstModel" Visibility="Collapsed" SelectionChanged="Model_Selected" Header="Select Model" ItemsSource="{x:Bind ModelList}" Width="150" Margin="10,0"></ComboBox>
+                    <!--/testing rating, works here-->
+                    <TextBlock Text="{x:Bind rating}"></TextBlock>
+                    <RatingControl Value="{Binding rating}" IsClearEnabled="True" IsReadOnly="True" />
+                    
+
                 </StackPanel>
 
             </Grid>

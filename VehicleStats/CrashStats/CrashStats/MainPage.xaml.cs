@@ -22,13 +22,12 @@ namespace CrashStats
 
     public sealed partial class MainPage : Page
     {
-
-        //ObservableCollection<int> YearList = new ObservableCollection<int>();
-
+ 
         List<int> YearList = new List<int>();
         List<string> MakeList = new List<string>();
         List<string> ModelList = new List<string>();
         private ObservableCollection<VariationResult> VariantList = new ObservableCollection<VariationResult>();
+        public int rating = 3;//test
 
         // vars
         string selectedURL = ""; //TODO: add reset

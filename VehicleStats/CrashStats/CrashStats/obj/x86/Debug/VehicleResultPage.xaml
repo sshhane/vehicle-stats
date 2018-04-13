@@ -8,8 +8,43 @@
                         
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBlock x:ConnectionId='2' Name="TxtBoxResult" Text="make" Foreground="Teal" FontSize="15" Margin="395,87,-395,-87"/>
-    </Grid>
+    <!--<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <TextBlock Name="TxtBoxMk" Text="" Foreground="Teal" FontSize="15" Grid.Row="1"/>
+        <TextBlock Name="TxtBoxMdl" Text="" Foreground="Teal" FontSize="15" Grid.Row="2"/>
+        <TextBlock Name="TxtBoxDesc" Text="" Foreground="Teal" FontSize="15" Grid.Row="3"/>
+
+    </Grid>-->
+    <StackPanel x:ConnectionId='2' x:Name="StackResults" Orientation="Vertical" Background="Gainsboro">
+        <TextBlock x:ConnectionId='3' Name="TxtBoxMk" Text="" Foreground="Teal" FontSize="15"/>
+        <TextBlock x:ConnectionId='4' Name="TxtBoxMdl" Text="" Foreground="Teal" FontSize="15"/>
+        <TextBlock x:ConnectionId='5' Name="TxtBoxDesc" Text="" Foreground="Teal" FontSize="15"/>
+        
+        <RatingControl x:ConnectionId='6' Width="120" Height="40" Value="{Binding RatingValue}" x:Name="fcdrRating"/>
+        <RatingControl x:ConnectionId='7' Width="120" Height="40" Value="{Binding RatingValue}" x:Name="fcprRating"/>
+        <RatingControl x:ConnectionId='8' Width="120" Height="40" Value="{Binding RatingValue}" x:Name="scdrRating"/>
+        <RatingControl x:ConnectionId='9' Width="120" Height="40" Value="{Binding RatingValue}" x:Name="scprRating"/>
+        <RatingControl x:ConnectionId='10' Width="120" Height="40" Value="{Binding RatingValue}" x:Name="rollRating"/>
+
+        <TextBlock x:ConnectionId='11' Name="TxtBoxFcdr" Text="" Foreground="Teal" FontSize="15"/>
+
+        <TextBlock x:ConnectionId='12' Name="TxtBoxFcpr" Text="" Foreground="Teal" FontSize="15"/>
+        <TextBlock x:ConnectionId='13' Name="TxtBoxScdr" Text="" Foreground="Teal" FontSize="15"/>
+        <TextBlock x:ConnectionId='14' Name="TxtBoxScpr" Text="" Foreground="Teal" FontSize="15"/>
+        <TextBlock x:ConnectionId='15' Name="TxtBoxRoll" Text="" Foreground="Teal" FontSize="15"/>
+
+        <TextBlock x:ConnectionId='16' Name="TxtBoxComplaints" Text="" Foreground="Teal" FontSize="15"/>
+    </StackPanel>
 </Page>
 

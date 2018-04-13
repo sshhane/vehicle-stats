@@ -8,7 +8,7 @@
                         
     mc:Ignorable="d">
 
-    <SplitView x:ConnectionId='2' x:Name="splitView" PaneBackground="{ThemeResource SystemControlBackgroundChromeMediumLowBrush}" IsPaneOpen="True" OpenPaneLength="260" CompactPaneLength="48" DisplayMode="Inline">
+    <SplitView PaneBackground="{ThemeResource SystemControlBackgroundChromeMediumLowBrush}" IsPaneOpen="True" OpenPaneLength="260" CompactPaneLength="48" DisplayMode="Inline">
         <SplitView.Pane>
             <Grid>
                 <Grid.ColumnDefinitions>
@@ -23,32 +23,38 @@
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
+        <TextBlock x:ConnectionId='2'                       ></TextBlock>
         <TextBlock x:ConnectionId='3' x:Name="ResultTextBlock" />
 
                 <StackPanel Orientation="Horizontal" Margin="20" Grid.Row="0">
-                    <ComboBox x:ConnectionId='6' x:Name="lstYear" Header="Select Year" Visibility="Visible"                                                                  Width="150" Margin="10,0"></ComboBox>
+                    <ComboBox x:ConnectionId='7' x:Name="lstYear" Header="Select Year" Visibility="Visible"                                                                  Width="150" Margin="10,0"></ComboBox>
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal" Margin="20" Grid.Row="1">
-                    <ComboBox x:ConnectionId='5'                                 x:Name="lstMake" Visibility="Collapsed" Header="Select Make"                                  Width="150" Margin="10,0"></ComboBox>
+                    <ComboBox x:ConnectionId='6'                                 x:Name="lstMake" Visibility="Collapsed" Header="Select Make"                                  Width="150" Margin="10,0"></ComboBox>
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal" Margin="20" Grid.Row="2" >
                     <ComboBox x:ConnectionId='4' x:Name="lstModel" Visibility="Collapsed"                                   Header="Select Model"                                  Width="150" Margin="10,0"></ComboBox>
+                    <!--/testing rating, works here-->
+                    <TextBlock x:ConnectionId='5'                       ></TextBlock>
+                    <RatingControl Value="{Binding rating}" IsClearEnabled="True" IsReadOnly="True" />
+                    
+
                 </StackPanel>
 
             </Grid>
         </SplitView.Pane>
 
-        <ListView x:ConnectionId='7' x:Name="lstViewVariation"                                   >
+        <ListView x:ConnectionId='8' x:Name="lstViewVariation"                                   >
             <ListView.ItemTemplate>
                 <DataTemplate                                   >
-                    <Grid x:ConnectionId='8'>
+                    <Grid x:ConnectionId='9'>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="47"/>
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
-                        <TextBlock x:ConnectionId='9'                                                             Foreground="Teal" 
+                        <TextBlock x:ConnectionId='10'                                                             Foreground="Teal" 
                            FontSize="15" Grid.Column="1"                          />
                     </Grid>
                 </DataTemplate>
