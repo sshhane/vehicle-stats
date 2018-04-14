@@ -8,8 +8,9 @@ Display vehicle test crash info from NHTSA API
 
 ## Screenshots
 
-![alt text](https://raw.githubusercontent.com/sshhane/vehicle-stats/blob/master/media/result.PNG)
-![alt text](https://raw.githubusercontent.com/sshhane/vehicle-stats/tree/master/media/result.png)
+![Variations](media/variations.PNG "Vehicle variations displayed")
+
+![Results](media/result.PNG "Vehicle crash test results displayed")
 
 ## Getting Started
 
