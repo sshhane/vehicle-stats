@@ -27,3 +27,7 @@ Navigate into folder:
 cd vehicle-stats
 ```
 Run using visual studio 2017
+
+## Using the app
+
+To get the crash test results you must first choose a year, make and model from the left side.  Next you must select the variant from the list on the right.  You will then navigate to the results page.  To find another vehicles results you can press the back button on the top left corner and search again.
