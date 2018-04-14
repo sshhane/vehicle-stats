@@ -15615,11 +15615,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\programing\\vehicle-stats\\VehicleStats\\CrashStats\\CrashStats\\CrashStats.csproj",
+      "projectUniqueName": "D:\\programing\\test\\vehicle-stats\\CrashStats\\CrashStats\\CrashStats.csproj",
       "projectName": "CrashStats",
-      "projectPath": "D:\\programing\\vehicle-stats\\VehicleStats\\CrashStats\\CrashStats\\CrashStats.csproj",
+      "projectPath": "D:\\programing\\test\\vehicle-stats\\CrashStats\\CrashStats\\CrashStats.csproj",
       "packagesPath": "C:\\Users\\shane\\.nuget\\packages\\",
-      "outputPath": "D:\\programing\\vehicle-stats\\VehicleStats\\CrashStats\\CrashStats\\obj\\",
+      "outputPath": "D:\\programing\\test\\vehicle-stats\\CrashStats\\CrashStats\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [

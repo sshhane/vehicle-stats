@@ -8,9 +8,9 @@
     <TargetOsDescription>Windows 10.0</TargetOsDescription>
     <SolutionConfiguration>Debug|x86</SolutionConfiguration>
     <PackageArchitecture>x86</PackageArchitecture>
-    <PackageIdentityName>4608e4c0-eb6c-4d20-8949-d18326ed6d8b</PackageIdentityName>
-    <PackageIdentityPublisher>CN=g00332592</PackageIdentityPublisher>
-    <IntermediateOutputPath>D:\programing\vehicle-stats\VehicleStats\CrashStats\CrashStats\obj\x86\Debug\</IntermediateOutputPath>
+    <PackageIdentityName>74d0e2c2-a1d4-4966-9653-8f120ae39649</PackageIdentityName>
+    <PackageIdentityPublisher>CN=994FB1B9-0044-412F-9F48-48AE67569DE4</PackageIdentityPublisher>
+    <IntermediateOutputPath>D:\programing\test\vehicle-stats\CrashStats\CrashStats\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
@@ -18,26 +18,26 @@
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>D:\programing\vehicle-stats\VehicleStats\CrashStats\CrashStats\bin\x86\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>28D5923539D6AE8302BF95E95784B04E654058CDC987ACAE0E38F40A2B387182</RegisteredManifestChecksum>
-    <RegisteredPackageMoniker>4608e4c0-eb6c-4d20-8949-d18326ed6d8b_1.0.0.0_x86__cenzdzagg8np4</RegisteredPackageMoniker>
-    <RegisteredUserModeAppID>4608e4c0-eb6c-4d20-8949-d18326ed6d8b_cenzdzagg8np4!App</RegisteredUserModeAppID>
-    <RegisteredPackageID>4608e4c0-eb6c-4d20-8949-d18326ed6d8b</RegisteredPackageID>
-    <RegisteredPackagePublisher>CN=g00332592</RegisteredPackagePublisher>
-    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+    <LayoutDir>D:\programing\test\vehicle-stats\CrashStats\CrashStats\bin\x86\Debug\AppX</LayoutDir>
+    <RegisteredManifestChecksum>14A0DA13248439414C309ECE6826D363ABAD591B21264A0CAB6D399A610AD736</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>42993sshhane.crashstats_1.1.2.0_x86__gn7j65k8g40cr</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>42993sshhane.crashstats_gn7j65k8g40cr!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>42993sshhane.crashstats</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=994FB1B9-0044-412F-9F48-48AE67569DE4</RegisteredPackagePublisher>
+    <RegisteredVersion>1.1.2.0</RegisteredVersion>
     <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="D:\programing\vehicle-stats\VehicleStats\CrashStats\CrashStats\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-04-13T21:31:46.179</Modified>
+      <Modified>2018-04-13T23:05:00.926</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="D:\programing\vehicle-stats\VehicleStats\CrashStats\CrashStats\bin\x86\Debug\CrashStats.exe">
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\bin\x86\Debug\CrashStats.exe">
       <PackagePath>entrypoint\CrashStats.exe</PackagePath>
-      <Modified>2018-04-13T21:31:45.768</Modified>
+      <Modified>2018-04-13T23:04:59.720</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\shane\.nuget\packages\microsoft.csharp\4.0.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -451,72 +451,381 @@
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
       <Modified>2015-07-22T22:11:12.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\programing\vehicle-stats\VehicleStats\CrashStats\CrashStats\Assets\crash.gif">
-      <PackagePath>Assets\crash.gif</PackagePath>
-      <Modified>2018-04-13T20:22:31.598</Modified>
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\Assets\AppList\AppList.scale-100.png">
+      <PackagePath>Assets\AppList\AppList.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-13T23:04:17.212</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\programing\vehicle-stats\VehicleStats\CrashStats\CrashStats\Assets\default.jpg">
-      <PackagePath>Assets\default.jpg</PackagePath>
-      <Modified>2018-04-13T19:06:56.964</Modified>
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\Assets\AppList\AppList.scale-125.png">
+      <PackagePath>Assets\AppList\AppList.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-13T23:04:17.212</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\programing\vehicle-stats\VehicleStats\CrashStats\CrashStats\Assets\dummy.jpg">
-      <PackagePath>Assets\dummy.jpg</PackagePath>
-      <Modified>2018-04-13T20:32:19.843</Modified>
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\Assets\AppList\AppList.scale-150.png">
+      <PackagePath>Assets\AppList\AppList.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-13T23:04:17.212</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\programing\vehicle-stats\VehicleStats\CrashStats\CrashStats\Properties\Default.rd.xml">
-      <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2018-04-10T17:00:56.000</Modified>
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\Assets\AppList\AppList.scale-200.png">
+      <PackagePath>Assets\AppList\AppList.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-13T23:04:17.213</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\programing\vehicle-stats\VehicleStats\CrashStats\CrashStats\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\Assets\AppList\AppList.scale-400.png">
+      <PackagePath>Assets\AppList\AppList.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-13T23:04:17.213</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\Assets\AppList\AppList.targetsize-16.png">
+      <PackagePath>Assets\AppList\AppList.targetsize-16.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-13T23:04:17.215</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\Assets\AppList\AppList.targetsize-16_altform-unplated.png">
+      <PackagePath>Assets\AppList\AppList.targetsize-16_altform-unplated.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-13T23:04:17.215</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\Assets\AppList\AppList.targetsize-20.png">
+      <PackagePath>Assets\AppList\AppList.targetsize-20.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-13T23:04:17.215</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\Assets\AppList\AppList.targetsize-20_altform-unplated.png">
+      <PackagePath>Assets\AppList\AppList.targetsize-20_altform-unplated.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-13T23:04:17.215</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\Assets\AppList\AppList.targetsize-24.png">
+      <PackagePath>Assets\AppList\AppList.targetsize-24.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-13T23:04:17.215</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\Assets\AppList\AppList.targetsize-24_altform-unplated.png">
+      <PackagePath>Assets\AppList\AppList.targetsize-24_altform-unplated.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-13T23:04:17.216</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\Assets\AppList\AppList.targetsize-256.png">
+      <PackagePath>Assets\AppList\AppList.targetsize-256.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-13T23:04:17.216</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\Assets\AppList\AppList.targetsize-256_altform-unplated.png">
+      <PackagePath>Assets\AppList\AppList.targetsize-256_altform-unplated.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-13T23:04:17.216</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\Assets\AppList\AppList.targetsize-30.png">
+      <PackagePath>Assets\AppList\AppList.targetsize-30.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-13T23:04:17.216</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\Assets\AppList\AppList.targetsize-30_altform-unplated.png">
+      <PackagePath>Assets\AppList\AppList.targetsize-30_altform-unplated.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-13T23:04:17.217</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\Assets\AppList\AppList.targetsize-32.png">
+      <PackagePath>Assets\AppList\AppList.targetsize-32.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-13T23:04:17.217</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\Assets\AppList\AppList.targetsize-32_altform-unplated.png">
+      <PackagePath>Assets\AppList\AppList.targetsize-32_altform-unplated.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-13T23:04:17.217</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\Assets\AppList\AppList.targetsize-36.png">
+      <PackagePath>Assets\AppList\AppList.targetsize-36.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-13T23:04:17.217</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\Assets\AppList\AppList.targetsize-36_altform-unplated.png">
+      <PackagePath>Assets\AppList\AppList.targetsize-36_altform-unplated.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-13T23:04:17.218</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\Assets\AppList\AppList.targetsize-40.png">
+      <PackagePath>Assets\AppList\AppList.targetsize-40.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-13T23:04:17.218</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\Assets\AppList\AppList.targetsize-40_altform-unplated.png">
+      <PackagePath>Assets\AppList\AppList.targetsize-40_altform-unplated.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-13T23:04:17.218</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\Assets\AppList\AppList.targetsize-48.png">
+      <PackagePath>Assets\AppList\AppList.targetsize-48.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-13T23:04:17.219</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\Assets\AppList\AppList.targetsize-48_altform-unplated.png">
+      <PackagePath>Assets\AppList\AppList.targetsize-48_altform-unplated.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-13T23:04:17.219</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\Assets\AppList\AppList.targetsize-60.png">
+      <PackagePath>Assets\AppList\AppList.targetsize-60.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-13T23:04:17.219</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\Assets\AppList\AppList.targetsize-60_altform-unplated.png">
+      <PackagePath>Assets\AppList\AppList.targetsize-60_altform-unplated.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-13T23:04:17.219</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\Assets\AppList\AppList.targetsize-64.png">
+      <PackagePath>Assets\AppList\AppList.targetsize-64.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-13T23:04:17.220</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\Assets\AppList\AppList.targetsize-64_altform-unplated.png">
+      <PackagePath>Assets\AppList\AppList.targetsize-64_altform-unplated.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-13T23:04:17.220</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\Assets\AppList\AppList.targetsize-72.png">
+      <PackagePath>Assets\AppList\AppList.targetsize-72.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-13T23:04:17.229</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\Assets\AppList\AppList.targetsize-72_altform-unplated.png">
+      <PackagePath>Assets\AppList\AppList.targetsize-72_altform-unplated.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-13T23:04:17.229</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\Assets\AppList\AppList.targetsize-80.png">
+      <PackagePath>Assets\AppList\AppList.targetsize-80.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-13T23:04:17.230</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\Assets\AppList\AppList.targetsize-80_altform-unplated.png">
+      <PackagePath>Assets\AppList\AppList.targetsize-80_altform-unplated.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-13T23:04:17.230</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\Assets\AppList\AppList.targetsize-96.png">
+      <PackagePath>Assets\AppList\AppList.targetsize-96.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-13T23:04:17.230</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\Assets\AppList\AppList.targetsize-96_altform-unplated.png">
+      <PackagePath>Assets\AppList\AppList.targetsize-96_altform-unplated.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-13T23:04:17.231</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\Assets\Large\Large310x310Logo.scale-100.png">
+      <PackagePath>Assets\Large\Large310x310Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-13T23:04:17.231</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\Assets\Large\Large310x310Logo.scale-125.png">
+      <PackagePath>Assets\Large\Large310x310Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-13T23:04:17.232</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\Assets\Large\Large310x310Logo.scale-150.png">
+      <PackagePath>Assets\Large\Large310x310Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-13T23:04:17.232</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\Assets\Large\Large310x310Logo.scale-200.png">
+      <PackagePath>Assets\Large\Large310x310Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-13T23:04:17.232</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\Assets\Large\Large310x310Logo.scale-400.png">
+      <PackagePath>Assets\Large\Large310x310Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-13T23:04:17.390</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\Assets\Medium\Medium150x150Logo.scale-100.png">
+      <PackagePath>Assets\Medium\Medium150x150Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-13T23:04:17.391</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\Assets\Medium\Medium150x150Logo.scale-125.png">
+      <PackagePath>Assets\Medium\Medium150x150Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-13T23:04:17.392</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\Assets\Medium\Medium150x150Logo.scale-150.png">
+      <PackagePath>Assets\Medium\Medium150x150Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-13T23:04:17.392</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\Assets\Medium\Medium150x150Logo.scale-200.png">
+      <PackagePath>Assets\Medium\Medium150x150Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-13T23:04:17.393</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\Assets\Medium\Medium150x150Logo.scale-400.png">
+      <PackagePath>Assets\Medium\Medium150x150Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-13T23:04:17.395</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\Assets\Small\Small71x71Logo.scale-100.png">
+      <PackagePath>Assets\Small\Small71x71Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-13T23:04:17.395</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\Assets\Small\Small71x71Logo.scale-125.png">
+      <PackagePath>Assets\Small\Small71x71Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-13T23:04:17.395</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\Assets\Small\Small71x71Logo.scale-150.png">
+      <PackagePath>Assets\Small\Small71x71Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-13T23:04:17.396</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\Assets\Small\Small71x71Logo.scale-200.png">
+      <PackagePath>Assets\Small\Small71x71Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-13T23:04:17.396</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\Assets\Small\Small71x71Logo.scale-400.png">
+      <PackagePath>Assets\Small\Small71x71Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-13T23:04:17.396</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\Assets\SplashScreen\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-13T23:04:17.397</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\Assets\SplashScreen\SplashScreen.scale-125.png">
+      <PackagePath>Assets\SplashScreen\SplashScreen.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-13T23:04:17.398</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\Assets\SplashScreen\SplashScreen.scale-150.png">
+      <PackagePath>Assets\SplashScreen\SplashScreen.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-13T23:04:17.398</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\Assets\SplashScreen\SplashScreen.scale-200.png">
+      <PackagePath>Assets\SplashScreen\SplashScreen.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-13T23:04:17.398</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\Assets\SplashScreen\SplashScreen.scale-400.png">
+      <PackagePath>Assets\SplashScreen\SplashScreen.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-13T23:04:17.399</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\Assets\Store\StoreLogo.scale-100.png">
+      <PackagePath>Assets\Store\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-13T23:04:17.400</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\Assets\Store\StoreLogo.scale-125.png">
+      <PackagePath>Assets\Store\StoreLogo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-13T23:04:17.401</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\Assets\Store\StoreLogo.scale-150.png">
+      <PackagePath>Assets\Store\StoreLogo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-13T23:04:17.401</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\Assets\Store\StoreLogo.scale-200.png">
+      <PackagePath>Assets\Store\StoreLogo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-13T23:04:17.401</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\Assets\Store\StoreLogo.scale-400.png">
+      <PackagePath>Assets\Store\StoreLogo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-13T23:04:17.401</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\Assets\Wide\Wide310x150Logo.scale-100.png">
+      <PackagePath>Assets\Wide\Wide310x150Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-13T23:04:17.402</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\Assets\Wide\Wide310x150Logo.scale-125.png">
+      <PackagePath>Assets\Wide\Wide310x150Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-13T23:04:17.402</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\Assets\Wide\Wide310x150Logo.scale-150.png">
+      <PackagePath>Assets\Wide\Wide310x150Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-13T23:04:17.403</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\Assets\Wide\Wide310x150Logo.scale-200.png">
+      <PackagePath>Assets\Wide\Wide310x150Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-13T23:04:17.403</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\Assets\Wide\Wide310x150Logo.scale-400.png">
+      <PackagePath>Assets\Wide\Wide310x150Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-04-13T23:04:17.403</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
-      <Modified>2015-09-20T16:30:08.000</Modified>
+      <Modified>2018-04-13T23:04:17.391</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\programing\vehicle-stats\VehicleStats\CrashStats\CrashStats\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-09-20T16:30:08.000</Modified>
+      <Modified>2018-04-13T23:04:17.397</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\programing\vehicle-stats\VehicleStats\CrashStats\CrashStats\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-09-20T16:30:08.000</Modified>
+      <Modified>2018-04-13T23:04:17.399</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\programing\vehicle-stats\VehicleStats\CrashStats\CrashStats\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-09-20T16:30:08.000</Modified>
+      <Modified>2018-04-13T23:04:17.400</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\programing\vehicle-stats\VehicleStats\CrashStats\CrashStats\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-09-20T16:30:08.000</Modified>
+      <Modified>2018-04-13T23:04:17.400</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\programing\vehicle-stats\VehicleStats\CrashStats\CrashStats\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-09-20T16:30:08.000</Modified>
+      <Modified>2018-04-13T23:04:17.402</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\programing\vehicle-stats\VehicleStats\CrashStats\CrashStats\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-09-20T16:30:08.000</Modified>
+      <Modified>2018-04-13T23:04:17.404</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\programing\vehicle-stats\VehicleStats\CrashStats\CrashStats\bin\x86\Debug\CrashStats.xr.xml">
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\Assets\crash.gif">
+      <PackagePath>Assets\crash.gif</PackagePath>
+      <Modified>2018-04-13T23:04:17.405</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\Assets\default.jpg">
+      <PackagePath>Assets\default.jpg</PackagePath>
+      <Modified>2018-04-13T23:04:17.405</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\Assets\dummy.jpg">
+      <PackagePath>Assets\dummy.jpg</PackagePath>
+      <Modified>2018-04-13T23:04:17.405</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\Properties\Default.rd.xml">
+      <PackagePath>Properties\Default.rd.xml</PackagePath>
+      <Modified>2018-04-13T23:04:17.412</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\bin\x86\Debug\CrashStats.xr.xml">
       <PackagePath>CrashStats.xr.xml</PackagePath>
-      <Modified>2018-04-13T21:31:45.648</Modified>
+      <Modified>2018-04-13T23:04:21.244</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.16299.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
       <Modified>2017-09-28T16:28:16.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\programing\vehicle-stats\VehicleStats\CrashStats\CrashStats\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-04-13T21:31:46.059</Modified>
+      <Modified>2018-04-13T23:05:00.677</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\programing\vehicle-stats\VehicleStats\CrashStats\CrashStats\bin\x86\Debug\Core\CrashStats.exe">
+    <AppxPackagedFile Include="D:\programing\test\vehicle-stats\CrashStats\CrashStats\bin\x86\Debug\Core\CrashStats.exe">
       <PackagePath>CrashStats.exe</PackagePath>
-      <Modified>2018-04-13T21:31:46.178</Modified>
+      <Modified>2018-04-13T23:05:00.922</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

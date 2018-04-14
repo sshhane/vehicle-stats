@@ -1,0 +1,58 @@
+﻿<Page x:ConnectionId='1'
+    x:Class="CrashStats.VehicleResultPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CrashStats"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                        
+    mc:Ignorable="d">
+
+    <StackPanel x:ConnectionId='2' x:Name="StackResults" Orientation="Vertical" Background="Gainsboro">
+
+        <Grid>
+            <Image Source="Assets/dummy.jpg"></Image>
+            <TextBlock x:ConnectionId='16' Name="TxtBoxDesc" Text="" Foreground="Black" FontSize="60" Padding="50,50,50,0" />
+        </Grid>
+        <Image x:ConnectionId='3' x:Name="ImgCarCrash" Stretch="Uniform" Grid.Column="0" Grid.Row="0"></Image>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <StackPanel  Background="White"  Grid.Column="0" Grid.Row="0" >
+                <TextBlock x:ConnectionId='11' Name="TxtBoxFcdr" Text="" Foreground="Teal" FontSize="30" Padding="60, 10, 0, 5"/>
+                <TextBlock x:ConnectionId='12' Name="TxtBoxFcpr" Text="" Foreground="Teal" FontSize="30" Padding="60, 10, 0, 5"/>
+                <TextBlock x:ConnectionId='13' Name="TxtBoxScdr" Text="" Foreground="Teal" FontSize="30" Padding="60, 10, 0, 5"/>
+                <TextBlock x:ConnectionId='14' Name="TxtBoxScpr" Text="" Foreground="Teal" FontSize="30" Padding="60, 10, 0, 5"/>
+                <TextBlock x:ConnectionId='15' Name="TxtBoxRoll" Text="" Foreground="Teal" FontSize="30" Padding="60, 10, 0, 5"/>
+
+            </StackPanel>
+            <Viewbox Grid.Column="1" Grid.Row="0" Width="500" Height="300">
+                <StackPanel>
+                    <RatingControl x:ConnectionId='6' Value="{Binding RatingValue}" x:Name="fcdrRating" IsReadOnly="True" />
+                    <RatingControl x:ConnectionId='7' Value="{Binding RatingValue}" x:Name="fcprRating" IsReadOnly="True" />
+                    <RatingControl x:ConnectionId='8' Value="{Binding RatingValue}" x:Name="scdrRating" IsReadOnly="True" />
+                    <RatingControl x:ConnectionId='9' Value="{Binding RatingValue}" x:Name="scprRating" IsReadOnly="True" />
+                    <RatingControl x:ConnectionId='10' Value="{Binding RatingValue}" x:Name="rollRating" IsReadOnly="True" />
+                </StackPanel>
+            </Viewbox>
+            <StackPanel Grid.Column="0" Grid.Row="1" Background="white">
+                <TextBlock Text="Complaints: " Foreground="Teal" FontSize="30" Padding="60, 10, 0, 5"/>
+                <TextBlock Text="Recalls: " Foreground="Teal" FontSize="30" Padding="60, 5, 0, 5"/>
+            </StackPanel>
+            <StackPanel Grid.Column="1" Grid.Row="1">
+                <TextBlock x:ConnectionId='4' Name="TxtBoxComplaints" Text="" Foreground="Teal" FontSize="30" HorizontalAlignment="Center" Padding="0, 10, 0, 5"/>
+                <TextBlock x:ConnectionId='5' Name="TxtBoxRecalls" Text="" Foreground="Teal" FontSize="30" HorizontalAlignment="Center" Padding="0, 5, 0, 5"/>
+
+            </StackPanel>
+        </Grid>
+    </StackPanel>
+</Page>
+
